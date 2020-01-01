@@ -21,18 +21,18 @@
         }
     </script>
     
-<title>Hello World! - CLD's BLOG</title>
+<title>group - CLD's BLOG</title>
 <meta name="author" content="AlanDecode" />
-<meta name="description" content="这是一篇示例文章，在这里你可以看到常用页面元素的显示效果。" />
-<meta property="og:title" content="Hello World! - CLD's BLOG" />
-<meta property="og:description" content="这是一篇示例文章，在这里你可以看到常用页面元素的显示效果。" />
+<meta name="description" content="--一个集合加上一个运算规则就是一个代数结构." />
+<meta property="og:title" content="group - CLD's BLOG" />
+<meta property="og:description" content="--一个集合加上一个运算规则就是一个代数结构." />
 <meta property="og:site_name" content="CLD's BLOG" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/Blog-With-GitHub-Boilerplate/archives/typography/" />
+<meta property="og:url" content="/Blog-With-GitHub-Boilerplate/math/" />
 <meta property="og:image" content="" />
-<meta property="article:published_time" content="2019-12-18T16:50:00-00.00" />
-<meta name="twitter:title" content="Hello World! - CLD's BLOG" />
-<meta name="twitter:description" content="这是一篇示例文章，在这里你可以看到常用页面元素的显示效果。" />
+<meta property="article:published_time" content="2017-06-28T17:26:00-00.00" />
+<meta name="twitter:title" content="group - CLD's BLOG" />
+<meta name="twitter:description" content="--一个集合加上一个运算规则就是一个代数结构." />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content="" />
 
@@ -72,131 +72,100 @@
 <main>    
     <section class="ga-section ga-content">
         <article class="yue">
-            <h1 class="ga-post_title">Hello World!</h1>
+            <h1 class="ga-post_title">group</h1>
             <span class="ga-post_meta ga-mono">
                 <span>AlanDecode</span>
                 <time>
-                    2019-12-18
+                    2017-06-28
                 </time>
                 
-                in <a no-style class="category" href="/Blog-With-GitHub-Boilerplate/category/Maverick/">
-                    Maverick
+                in <a no-style class="category" href="/Blog-With-GitHub-Boilerplate/category/math/">
+                    math
                 </a>
                 
                 
             </span>
             <div class="ga-content_body">
-                <div class="notice">这是一篇示例文章，在这里你可以看到常用页面元素的显示效果，同时也是 Markdown 语法的参考文章。保留或者删除本文，开始自己的创作吧！</div><h2>L2 Heading</h2>
-<h3>L3 Heading</h3>
-<h4>L4 Heading</h4>
-<h5>L5 Heading</h5>
-<h6>L6 Heading</h6>
-<h2>Paragraph</h2>
-<p>We are creating a world that all may enter without privilege or prejudice accorded by race, economic power, military force, or station of birth.</p>
-<p>We are creating a world where anyone, anywhere may express his or her beliefs, no matter how singular, without fear of being coerced into silence or conformity.</p>
-<h2>Inline elements</h2>
-<p><strong>Bold</strong>, <ruby>Ruby<rp>(</rp><rt>ルビ</rt><rp>)</rp></ruby>, <em>Italic</em>, <del>Strikethrough</del>, <a href="https://www.imalan.cn">Link</a><sup id="fn_ref_1"><a href="#fn_1">1</a></sup>。</p>
-<h2>Blockquote and nested blockquote</h2>
-<blockquote><p>安得广厦千万间，大庇天下寒士俱欢颜！风雨不动安如山。</p>
-<blockquote><p>呜呼！何时眼前突兀见此屋，吾庐独破受冻死亦足！</p>
+                <p>--一个集合加上一个运算规则就是一个代数结构.</p>
+<h4>合成法则</h4>
+<p>集合$S$上的一个<strong>合成法则</strong>（又称二元运算） $F$ 是指一个映射：</p>
+<p>​       $ S \times S \rightarrow S$</p>
+<p>$S\times S$为$S$与$S$的<strong>笛卡尔积</strong>，其中的元素为有序对$(a,b):a,b\in S$</p>
+<p>即把 $S$ 中的元素 $a,b$ 变换成 $S$ 中的另外一个元素.</p>
+<blockquote><p>一个合成法则作用在元素对$(a,b)$上的结果通常用$ab,a\times b,a+b,a \circ b$表示.</p>
+<p>（任何采用某种记号的结果都可以以另一种记号改写）</p>
+<p>通常先求值括号里的表达式.</p>
 </blockquote>
+<p>合成法则的<strong>结合律</strong>是指：</p>
+<p>​       $(ab)c = a(bc)$</p>
+<p>合成法则的<strong>交换律</strong>是指：</p>
+<p>​       $ab = ba$</p>
+<h4>【2.1.1】命题：</h4>
+<p>若集合$S$上的合成法则<strong>满足结合率</strong>，则有唯一一种方式来定义$S$中任意$n$个元素</p>
+<p>​       $a_1,a_2,\dots,a_n$</p>
+<p>的乘积，暂时记作$[a_1a_2\dots a_n]$，</p>
+<p>（即$S$中$n$个元素乘积的结果与加括号的次序无关）</p>
+<p>这个乘积有以下性质：</p>
+<blockquote><p>$(i)$：一个元素的乘积是其自身：$[a_1]=a_1$.</p>
+<p>$(ii)$：两个元素的积$[a_1a_2]$由合成法则给出.</p>
+<p>$(iii)$：对于任意整数$i$：$1\leqslant i < n$，有</p>
+<p>​      $[a_1,a_2\dots a_n] = [a_1\dots a_i][a_{i+1}\dots a_n].$</p>
+<p>（补充说明：等号右边是先计算出$q=[a_1\dots a_i]$，$p=[a_{i+1}\dots a_n]$，再按合成法则计算$pq$）</p>
 </blockquote>
-<h2>Code</h2>
-<p>Inline code: <code>int a=1;</code>. Code block:</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span> <span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">){</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-<h2>List</h2>
-<h3>Unordered List</h3>
+<p>证明：</p>
+<blockquote><p>对$n$用数学归纳法.</p>
+<p>$(i),(ii)$已定义$n\leqslant 2$时的乘积.</p>
+<p>$n=2$时$(iii)$成立.</p>
+<p>假设对于所有$r\leqslant n-1,r\in Z^{+}$已经定义了$r$个元素的乘积，且乘积是唯一的并满足$(iii)$，</p>
+<p>按照$[a_1\dots a_n] = [a_1\dots a_{n-1}][a_n]$定义$n$个元素的乘积.</p>
+<p>对于$i<n-1,i\in Z^{+}$
+$$
+\begin{align<em>}
+[a_1\dots a_n] &amp;= [a<em>1\dots a</em>{n-1}][a_n] \
+&amp;= ([a_1\dots a<em>i][a</em>{i+1}\dots a_{n-1}])[a_n] \
+&amp;= <a href="[a_{i+1}\dots a_{n-1}][a_n]">a_1\dots a_i</a> \
+&amp;= [a_1\dots a<em>i][a</em>{i+1}\dots a_n]
+\end{align</em>}
+$$
+故$(iii)$对于$n$成立.</p>
+<p>证毕.</p>
+</blockquote>
+<p>现在起表示乘积（只用于有结合率的合成法则）直接记作$a_1\dots a_n$.</p>
+<p>元素$e\in S$称为（$S$上的）合成法则的<strong>恒等元</strong>，若$e$满足</p>
+<p>​       对任意$a\in S$，$ea = a = ae$</p>
+<p>（$e$在合成法则为乘法时通常记为$1$，在合成法则为加法时通常记为$0$）</p>
+<p>若$S$上有一个<strong>满足结合率</strong>且有恒等元$1$的合成法则（记作乘法），</p>
+<p>$a\in  S$是可逆的，若有$b \in S$使得</p>
+<p>​       $ab=1$ 与 $ba=1$</p>
+<p>如果上式成立，则$b$称为$a$的<strong>逆</strong>。</p>
+<p><strong>逆的性质</strong></p>
 <ul>
-<li>iPhone<ul>
-<li>iPhone X</li>
-<li>iPhone 11</li>
-</ul>
+<li><p>如果$a$有左逆$l$与右逆$r$，即$la=1$与$ar=1$，则$l=r$，$a$是可逆的，且$r$是$a$的逆.</p>
 </li>
-<li>iPad</li>
-<li>MacBook</li>
-</ul>
-<h3>Ordered List</h3>
-<ol>
-<li>打开冰箱<ol>
-<li>右手放在冰箱门拉手上</li>
-<li>左手扶住冰箱主体</li>
-<li>右手向后用力</li>
-</ol>
+<li><p>若$a$是可逆的，则其逆是唯一的.（所以可以把元素$a$的逆记为$a^{-1}$或$-a$）</p>
 </li>
-<li>把大象放进冰箱</li>
-<li>关上冰箱</li>
-</ol>
-<h2>Horizontal rule</h2>
-<hr>
-<h2>Math</h2>
-<p>Inline Math: $m\times n$, math block:</p>
-<p>$$C_{m\times k}=A_{m\times n}\cdot B_{n\times k}$$</p>
-<h2>Figures</h2>
-<h3>Single figure</h3>
-<p><figure class="pswp-item" style="flex: 92.88888888888889" data-width="836" data-height="450"><img src="https://cdn.jsdelivr.net/gh/Cloudifold/Blog-With-GitHub-Boilerplate@gh-pages/archives/assets/e0affbc80ccb2d596c87b520e37e7071.jpg" alt="Princess Mononoke" /><figcaption>Princess Mononoke</figcaption></figure></p>
-<h3>Photoset</h3>
-<div class="photos">
-<figure class="pswp-item" style="flex: 75.0" data-width="4032" data-height="2688"><img src="https://cdn.jsdelivr.net/gh/Cloudifold/Blog-With-GitHub-Boilerplate@gh-pages/archives/assets/4956a144888cdbbb6c2df1d1d15384b0.jpeg" alt="" /></figure>
-<figure class="pswp-item" style="flex: 50.03720238095238" data-width="2690" data-height="2688"><img src="https://cdn.jsdelivr.net/gh/Cloudifold/Blog-With-GitHub-Boilerplate@gh-pages/archives/assets/4c66f0da616b08325b3aaa4c8b3f68e1.jpg" alt="" /></figure>
-<figure class="pswp-item" style="flex: 75.0" data-width="4032" data-height="2688"><img src="https://cdn.jsdelivr.net/gh/Cloudifold/Blog-With-GitHub-Boilerplate@gh-pages/archives/assets/8b4d2334469ffa39b59e6fdb37c8c601.jpeg" alt="" /></figure></div><div class="photos">
-<figure class="pswp-item" style="flex: 75.0" data-width="4032" data-height="2688"><img src="https://cdn.jsdelivr.net/gh/Cloudifold/Blog-With-GitHub-Boilerplate@gh-pages/archives/assets/0f5023d542a33e7c9d270f3cd6a99562.jpeg" alt="" /></figure>
-<figure class="pswp-item" style="flex: 75.0" data-width="4032" data-height="2688"><img src="https://cdn.jsdelivr.net/gh/Cloudifold/Blog-With-GitHub-Boilerplate@gh-pages/archives/assets/20ec69d2a0276336f95e11f42866d17f.jpeg" alt="" /></figure>
-<figure class="pswp-item" style="flex: 75.0" data-width="4032" data-height="2688"><img src="https://cdn.jsdelivr.net/gh/Cloudifold/Blog-With-GitHub-Boilerplate@gh-pages/archives/assets/2b8af25285e5a193729a350593113bad.jpeg" alt="" /></figure></div><h2>Table</h2>
-<table>
-<thead><tr>
-<th>header</th>
-<th>header</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cell 1</td>
-<td>cell 2</td>
-</tr>
-<tr>
-<td>cell 3</td>
-<td>cell 4</td>
-</tr>
-</tbody>
-</table>
-<h2>Link Card</h2>
-<div class="links">
-<a style="display:block" target="_blank" href="https://www.imalan.cn" class="board-item">                 <div class="board-thumb"><img src="https://secure.gravatar.com/avatar/1741a6eef5c824899e347e4afcbaa75d?s=200&r=G&d="></div>                 <div class="board-title">AlanDecode</div></a></div><hr><div class="footnotes"><ol><li id="fn_1">Home page for AlanDecode <a no-style href="#fn_ref_1">↩</a></li></ol></div>
+<li><p>若$a,b$均可逆，则乘积$ab$可逆，且</p>
+</li>
+</ul>
+<p>​               $(ab)^{-1} = b^{-1}a^{-1}$.</p>
+<ul>
+<li>一个不可逆的元素$a$可以有左逆或右逆.</li>
+</ul>
+<p>幂记号：</p>
+<ul>
+<li>对于$n\in Z^+$，$a^n = \underbrace{a\dots a}_{n个a}$，$a^{-n} = a^{-1}\dots a^{-1} = (a^n)^{-1}$.</li>
+<li>幂运算律（$a^r a^s = a^{r+s},(a^r)^s=a^{rs}$）成立.</li>
+<li>合成法则为加法时，幂运算记号$a^n$通常改为$na = \underbrace{a+\dots + a}_{n个a}$</li>
+</ul>
+<h4>群 与 子群</h4>
+<p>一个<strong>群</strong>是一个</p>
+
             </div>
         </article>
-        <div id="ga-tags">
-    
-    <span class="ga-tag">
-        <a class="ga-highlight" href="/Blog-With-GitHub-Boilerplate/tag/Design/">#Design</a>
-    </span>
-    
-    <span class="ga-tag">
-        <a class="ga-highlight" href="/Blog-With-GitHub-Boilerplate/tag/Typography/">#Typography</a>
-    </span>
-    
-</div>
+        
     </section>
 
     
-<section id="ga-content_pager">
-
-    <div class="next">
-        <h3>没有了</h3>
-        <p class="yue">这是最新的文章</p>
-    </div>
-
-
-    <div class="prev">
-        <a class="ga-highlight" href="/Blog-With-GitHub-Boilerplate/archives/194/">Overview of Maverick</a>
-        <p class="yue">Maverick is a static blog generator built with python.</p>
-    </div>
-
-</section>
-
 
     
 
