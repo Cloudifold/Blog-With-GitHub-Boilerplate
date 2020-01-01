@@ -1,10 +1,9 @@
 ---
-layout: page
 title: group
 slug: math
 date: 2017/06/28 17:26:00
 status: publish
-author: AlanDecode
+author: CLD
 categories: 
   - math
   - qwq
