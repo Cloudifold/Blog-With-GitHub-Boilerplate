@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>CLD's BLOG</title><link>/Blog-With-GitHub-Boilerplate/</link><description>test des</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>${static_prefix}logo.png</url><title>CLD's BLOG</title><link>/Blog-With-GitHub-Boilerplate/</link></image><language>zh-CN</language><lastBuildDate>Wed, 01 Jan 2020 04:26:30 +0806</lastBuildDate><pubDate>Wed, 01 Jan 2020 04:26:30 +0806</pubDate><item><title>group</title><link>/Blog-With-GitHub-Boilerplate/archives/math/</link><description>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>CLD's BLOG</title><link>/Blog-With-GitHub-Boilerplate/</link><description>test des</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>${static_prefix}logo.png</url><title>CLD's BLOG</title><link>/Blog-With-GitHub-Boilerplate/</link></image><language>zh-CN</language><lastBuildDate>Sat, 04 Jan 2020 12:01:37 +0806</lastBuildDate><pubDate>Sat, 04 Jan 2020 12:01:37 +0806</pubDate><item><title>group</title><link>/Blog-With-GitHub-Boilerplate/archives/math/</link><description>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
 &lt;h4&gt;合成法则&lt;/h4&gt;
 &lt;p&gt;集合$S$上的一个&lt;strong&gt;合成法则&lt;/strong&gt;（又称二元运算） $F$ 是指一个映射：&lt;/p&gt;
 &lt;p&gt;​       $ S \times S \rightarrow S$&lt;/p&gt;
@@ -34,10 +34,10 @@
 &lt;p&gt;对于$i&lt;n-1,i\in Z^{+}$
 $$
 \begin{align&lt;em&gt;}
-[a_1\dots a_n] &amp;amp;= [a&lt;em&gt;1\dots a&lt;/em&gt;{n-1}][a_n] \
-&amp;amp;= ([a_1\dots a&lt;em&gt;i][a&lt;/em&gt;{i+1}\dots a_{n-1}])[a_n] \
-&amp;amp;= &lt;a href="[a_{i+1}\dots a_{n-1}][a_n]"&gt;a_1\dots a_i&lt;/a&gt; \
-&amp;amp;= [a_1\dots a&lt;em&gt;i][a&lt;/em&gt;{i+1}\dots a_n]
+[a_1 \dots a_n] &amp;amp;= [a&lt;em&gt;1 \dots a&lt;/em&gt;{n-1}][a_n] \
+&amp;amp;= ([a_1 \dots a&lt;em&gt;i][a&lt;/em&gt;{i+1} \dots a_{n-1}])[a_n] \
+&amp;amp;= &lt;a href="[a_{i+1} \dots a_{n-1}][a_n]"&gt;a_1 \dots a_i&lt;/a&gt; \
+&amp;amp;= [a_1 \dots a&lt;em&gt;i][a&lt;/em&gt;{i+1} \dots a_n]
 \end{align&lt;/em&gt;}
 $$
 故$(iii)$对于$n$成立.&lt;/p&gt;
