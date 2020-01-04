@@ -4,12 +4,11 @@ title: 关于
 slug: about
 date: 2017/06/28 17:26:00
 status: publish
-author: AlanDecode
+author: CLD
 categories: 
-  - Maverick
-  - Dev
+  - about
 tags: 
-  - theme
+  - about
 ---
 
 这里是我的个人博客，通过 GitHub 管理与构建。
@@ -17,6 +16,5 @@ tags:
 
 ## Contact
 
-Email: hi#imalan.cn (replace # with @)
+qwq~
 
-Telegram：[AlanDecode](https://t.me/alandecode)
