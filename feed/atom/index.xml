@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/Blog-With-GitHub-Boilerplate/</id><title>CLD's BLOG</title><updated>2020-01-04T12:03:39.417045+08:06</updated><author><name>CLD</name><email>hi@imalan.cn</email></author><link href="/Blog-With-GitHub-Boilerplate/" rel="alternate"/><generator uri="http://lkiesow.github.io/python-feedgen" version="0.8.0">python-feedgen</generator><logo>${static_prefix}logo.png</logo><subtitle>test des</subtitle><entry><id>/Blog-With-GitHub-Boilerplate/archives/math/</id><title>group</title><updated>2020-01-04T12:03:39.417152+00:00</updated><author><name>CLD</name><email>hi@imalan.cn</email><uri>https://www.imalan.cn</uri></author><content>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/Blog-With-GitHub-Boilerplate/</id><title>CLD's BLOG</title><updated>2020-01-04T12:04:29.285256+08:06</updated><author><name>CLD</name><email>hi@imalan.cn</email></author><link href="/Blog-With-GitHub-Boilerplate/" rel="alternate"/><generator uri="http://lkiesow.github.io/python-feedgen" version="0.8.0">python-feedgen</generator><logo>${static_prefix}logo.png</logo><subtitle>test des</subtitle><entry><id>/Blog-With-GitHub-Boilerplate/archives/math/</id><title>group</title><updated>2020-01-04T12:04:29.285377+00:00</updated><author><name>CLD</name><email>hi@imalan.cn</email><uri>https://www.imalan.cn</uri></author><content>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
 &lt;h4&gt;合成法则&lt;/h4&gt;
 &lt;p&gt;集合$S$上的一个&lt;strong&gt;合成法则&lt;/strong&gt;（又称二元运算） $F$ 是指一个映射：&lt;/p&gt;
 &lt;p&gt;​       $ S \times S \rightarrow S$&lt;/p&gt;
@@ -43,6 +43,7 @@ $$
 故$(iii)$对于$n$成立.&lt;/p&gt;
 &lt;p&gt;证毕.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;test_LATEX&lt;/p&gt;
 &lt;p&gt;现在起表示乘积（只用于有结合率的合成法则）直接记作$a_1\dots a_n$.&lt;/p&gt;
 &lt;p&gt;元素$e\in S$称为（$S$上的）合成法则的&lt;strong&gt;恒等元&lt;/strong&gt;，若$e$满足&lt;/p&gt;
 &lt;p&gt;​       对任意$a\in S$，$ea = a = ae$&lt;/p&gt;
@@ -72,7 +73,7 @@ $$
 &lt;/ul&gt;
 &lt;h4&gt;群 与 子群&lt;/h4&gt;
 &lt;p&gt;一个&lt;strong&gt;群&lt;/strong&gt;是一个&lt;/p&gt;
-</content><link href="/Blog-With-GitHub-Boilerplate/archives/math/" rel="alternate"/><published>2017-06-28T17:26:00+08:06</published></entry><entry><id>/Blog-With-GitHub-Boilerplate/archives/194/</id><title>Overview of Maverick</title><updated>2020-01-04T12:03:39.417131+00:00</updated><author><name>AlanDecode</name><email>hi@imalan.cn</email><uri>https://www.imalan.cn</uri></author><content>&lt;h2&gt;Overview&lt;/h2&gt;
+</content><link href="/Blog-With-GitHub-Boilerplate/archives/math/" rel="alternate"/><published>2017-06-28T17:26:00+08:06</published></entry><entry><id>/Blog-With-GitHub-Boilerplate/archives/194/</id><title>Overview of Maverick</title><updated>2020-01-04T12:04:29.285352+00:00</updated><author><name>AlanDecode</name><email>hi@imalan.cn</email><uri>https://www.imalan.cn</uri></author><content>&lt;h2&gt;Overview&lt;/h2&gt;
 &lt;p&gt;Maverick is a static blog generator built with python. Like Hexo and Jekyll, it takes Markdown(&lt;code&gt;.md&lt;/code&gt;) files as input, and output beautifully formated and well structured website pages(&lt;code&gt;.html&lt;/code&gt;). It has a lot built-in useful features(feed, search, sitemap, etc.), with extended Markdown syntax and enhanced image processing pipeline.&lt;/p&gt;
 &lt;p&gt;If you are tired of intricate plugins and complicated configurations, just give Maverick a try. You focus on writing, let Maverick take care of the rest.&lt;/p&gt;
 &lt;p&gt;Pull requests are surely welcome. If you have any questions or suggestions, please head to &lt;a href="https://github.com/AlanDecode/Maverick/issues"&gt;issue area&lt;/a&gt; and leave us a message. Before that, let's finish this document.&lt;/p&gt;
@@ -98,7 +99,7 @@ $$
 &lt;p&gt;Read the full documentation &lt;a href="https://github.com/AlanDecode/Maverick"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;License&lt;/h2&gt;
 &lt;p&gt;MIT © &lt;a href="https://github.com/AlanDecode"&gt;AlanDecode&lt;/a&gt;.&lt;/p&gt;
-</content><link href="/Blog-With-GitHub-Boilerplate/archives/194/" rel="alternate"/><published>2019-12-11T22:23:00+08:06</published></entry><entry><id>/Blog-With-GitHub-Boilerplate/archives/typography/</id><title>Hello World!</title><updated>2020-01-04T12:03:39.417090+00:00</updated><author><name>AlanDecode</name><email>hi@imalan.cn</email><uri>https://www.imalan.cn</uri></author><content>&lt;div class="notice"&gt;这是一篇示例文章，在这里你可以看到常用页面元素的显示效果，同时也是 Markdown 语法的参考文章。保留或者删除本文，开始自己的创作吧！&lt;/div&gt;&lt;h2&gt;L2 Heading&lt;/h2&gt;
+</content><link href="/Blog-With-GitHub-Boilerplate/archives/194/" rel="alternate"/><published>2019-12-11T22:23:00+08:06</published></entry><entry><id>/Blog-With-GitHub-Boilerplate/archives/typography/</id><title>Hello World!</title><updated>2020-01-04T12:04:29.285308+00:00</updated><author><name>AlanDecode</name><email>hi@imalan.cn</email><uri>https://www.imalan.cn</uri></author><content>&lt;div class="notice"&gt;这是一篇示例文章，在这里你可以看到常用页面元素的显示效果，同时也是 Markdown 语法的参考文章。保留或者删除本文，开始自己的创作吧！&lt;/div&gt;&lt;h2&gt;L2 Heading&lt;/h2&gt;
 &lt;h3&gt;L3 Heading&lt;/h3&gt;
 &lt;h4&gt;L4 Heading&lt;/h4&gt;
 &lt;h5&gt;L5 Heading&lt;/h5&gt;
