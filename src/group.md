@@ -8,7 +8,7 @@ categories:
   - math
 tags: 
   - math
-  - algbra
+  - algebra
 ---
 
 --一个集合加上一个运算规则就是一个代数结构.
