@@ -110,6 +110,10 @@ $a\in  S$是可逆的，若有$b \in S$使得
 
 + 一个不可逆的元素$a$可以有左逆或右逆.
 
+test_ruby
+
+{{使用中:in-use}}
+
 幂记号：
 
 + 对于$n\in Z^+$，$a^n = \underbrace{a\dots a}_{n个a}$，$a^{-n} = a^{-1}\dots a^{-1} = (a^n)^{-1}$.
