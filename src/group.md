@@ -1,7 +1,7 @@
 ---
-title: group
+title: Algebra-Chapter1-Group
 slug: math
-date: 2017/06/28 17:26:00
+date: 2020/01/06 9:3:00
 status: publish
 author: CLD
 categories: 
@@ -74,8 +74,8 @@ $S\times S$为$S$与$S$的**笛卡尔积**，其中的元素为有序对$(a,b):a
 >按照$[a_1\dots a_n] = [a_1\dots a_{n-1}][a_n]$定义$n$个元素的乘积.
 >
 >对于$i<n-1,i\in Z^{+}$
-qwqqqqq
-$$\begin{align*} [a_1 \dots a_n] &= [a_1 \dots a_{n-1}][a_n] \\ &= ([a_1 \dots a_i][a_{i+1} \dots a_{n-1}])[a_n] \\ &= [a_1 \dots a_i]([a_{i+1} \dots a_{n-1}][a_n]) \\ &= [a_1 \dots a_i][a_{i+1} \dots a_n] \end{align*} $$
+>qwqqqqq
+>$\begin{align*} [a_1 \dots a_n] &= [a_1 \dots a_{n-1}][a_n] \\ &= ([a_1 \dots a_i][a_{i+1} \dots a_{n-1}])[a_n] \\ &= [a_1 \dots a_i]([a_{i+1} \dots a_{n-1}][a_n]) \\ &= [a_1 \dots a_i][a_{i+1} \dots a_n] \end{align*} $
 >故$(iii)$对于$n$成立.
 >
 >证毕.
