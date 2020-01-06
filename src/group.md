@@ -80,7 +80,7 @@ $ [a_1 \dots a_n] = [a_1 \dots a_{n-1}][a_n] \\  = ([a_1 \dots a_i][a_{i+1} \dot
 >
 
 
-$$ \begin{align} [a_1 \dots a_n] &= [a_1 \dots a_{n-1}][a_n] \\  &= ([a_1 \dots a_i][a_{i+1} \dots a_{n-1}])[a_n] \\ &= [a_1  \dots a_i]([a_{i+1} \dots a_{n-1}][a_n]) \\ &= [a_1 \dots  a_i][a_{i+1} \dots a_n] \end{align} $$
+$$ \begin{aligned} [a_1 \dots a_n] &= [a_1 \dots a_{n-1}][a_n] \\  &= ([a_1 \dots a_i][a_{i+1} \dots a_{n-1}])[a_n] \\ &= [a_1  \dots a_i]([a_{i+1} \dots a_{n-1}][a_n]) \\ &= [a_1 \dots  a_i][a_{i+1} \dots a_n] \end{aligned} $$
 
 
 
@@ -88,7 +88,7 @@ $$ \begin{align} [a_1 \dots a_n] &= [a_1 \dots a_{n-1}][a_n] \\  &= ([a_1 \dots 
 >
 >证毕.
 
-test_LATEX_F
+test_LATEX_0x10
 
 现在起表示乘积（只用于有结合率的合成法则）直接记作$a_1\dots a_n$.
 
