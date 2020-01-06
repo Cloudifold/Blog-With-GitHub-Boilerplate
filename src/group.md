@@ -80,7 +80,7 @@ $ [a_1 \dots a_n] = [a_1 \dots a_{n-1}][a_n] \\  = ([a_1 \dots a_i][a_{i+1} \dot
 >
 
 
-\begin{align} [a_1 \dots a_n] &= [a_1 \dots a_{n-1}][a_n] \\  &= ([a_1 \dots a_i][a_{i+1} \dots a_{n-1}])[a_n] \\ &= [a_1  \dots a_i]([a_{i+1} \dots a_{n-1}][a_n]) \\ &= [a_1 \dots  a_i][a_{i+1} \dots a_n] \end{align}
+$$ \begin{align} [a_1 \dots a_n] &= [a_1 \dots a_{n-1}][a_n] \\  &= ([a_1 \dots a_i][a_{i+1} \dots a_{n-1}])[a_n] \\ &= [a_1  \dots a_i]([a_{i+1} \dots a_{n-1}][a_n]) \\ &= [a_1 \dots  a_i][a_{i+1} \dots a_n] \end{align} $$
 
 
 
