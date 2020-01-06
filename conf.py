@@ -3,14 +3,14 @@
 """
 
 # For Maverick
-site_prefix = "/Blog-With-GitHub-Boilerplate/"
+site_prefix = "/MyBlog/"
 source_dir = "../src/"
 build_dir = "../dist/"
 index_page_size = 10
 archives_page_size = 20
 enable_jsdelivr = {
     "enabled": True,
-    "repo": "Cloudifold/Blog-With-GitHub-Boilerplate@gh-pages"
+    "repo": "Cloudifold/MyBlog@gh-pages"
 }
 
 # 站点设置
@@ -19,9 +19,9 @@ site_logo = "${static_prefix}logo.png"
 site_build_date = "2019-12-18T16:51+08:00"
 author = "CLD"
 email = "hi@imalan.cn"
-author_homepage = "https://www.imalan.cn"
+author_homepage = "MyBlog"
 description = "test des"
-key_words = ['Maverick', '熊猫小A', 'Galileo', 'blog']
+key_words = [ 'Galileo', 'blog']
 language = 'zh-CN'
 external_links = [
     {
