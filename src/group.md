@@ -72,7 +72,7 @@ $S\times S$为$S$与$S$的**笛卡尔积**，其中的元素为有序对$(a,b):a
 >
 >按照$[a_1\dots a_n] = [a_1\dots a_{n-1}][a_n]$定义$n$个元素的乘积.
 >
->对于$qwqi<n-1,i \in Z^+$，
+>对于qwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwq
 >
 >
 >
@@ -82,7 +82,7 @@ $S\times S$为$S$与$S$的**笛卡尔积**，其中的元素为有序对$(a,b):a
 >
 >证毕.
 
-test_LATEX_9
+test_LATEX_A
 
 现在起表示乘积（只用于有结合率的合成法则）直接记作$a_1\dots a_n$.
 
