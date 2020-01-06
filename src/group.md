@@ -76,14 +76,8 @@ $S\times S$为$S$与$S$的**笛卡尔积**，其中的元素为有序对$(a,b):a
 >
 >
 >
-$ [a_1 \dots a_n] = [a_1 \dots a_{n-1}][a_n] \\  = ([a_1 \dots a_i][a_{i+1} \dots a_{n-1}])[a_n] \\ = [a_1  \dots a_i]([a_{i+1} \dots a_{n-1}][a_n]) \\ = [a_1 \dots  a_i][a_{i+1} \dots a_n]  $
->
-
-
 $$ \begin{aligned} [a_1 \dots a_n] &= [a_1 \dots a_{n-1}][a_n] \\  &= ([a_1 \dots a_i][a_{i+1} \dots a_{n-1}])[a_n] \\ &= [a_1  \dots a_i]([a_{i+1} \dots a_{n-1}][a_n]) \\ &= [a_1 \dots  a_i][a_{i+1} \dots a_n] \end{aligned} $$
-
-
-
+>
 >故$(iii)$对于$n$成立.
 >
 >证毕.
