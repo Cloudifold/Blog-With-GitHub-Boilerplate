@@ -135,11 +135,11 @@ grub> quit
 ```bash
 losetup -d /dev/loop3
 ```
+结束！
+现在它可以用了1
 
 
-
-
-
+**附：**
 一个脚本：
 
 ```bash
