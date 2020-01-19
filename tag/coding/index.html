@@ -21,20 +21,21 @@
         }
     </script>
     
-<title>Algebra-Chapter1-Group - CLD's BLOG</title>
+<title>
+    标签: coding - CLD's BLOG
+</title>
 <meta name="author" content="CLD" />
-<meta name="description" content="--一个集合加上一个运算规则就是一个代数结构." />
-<meta property="og:title" content="Algebra-Chapter1-Group - CLD's BLOG" />
-<meta property="og:description" content="--一个集合加上一个运算规则就是一个代数结构." />
+<meta name="description" content="test des" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="test des" />
 <meta property="og:site_name" content="CLD's BLOG" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/MyBlog/archives/math/" />
-<meta property="og:image" content="" />
-<meta property="article:published_time" content="2020-01-06T09:03:00-00.00" />
-<meta name="twitter:title" content="Algebra-Chapter1-Group - CLD's BLOG" />
-<meta name="twitter:description" content="--一个集合加上一个运算规则就是一个代数结构." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="" />
+<meta property="og:image" content="CLD's BLOG" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:description" content="test des" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="" />
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/logo.png" />
 
 
     
@@ -70,122 +71,27 @@
             <div class="wrapper">
                 
 <main>    
-    <section class="ga-section ga-content">
-        <article class="yue">
-            <h1 class="ga-post_title">Algebra-Chapter1-Group</h1>
-            <span class="ga-post_meta ga-mono">
-                <span>CLD</span>
-                <time>
-                    2020-01-06
-                </time>
-                
-                in <a no-style class="category" href="/MyBlog/category/math/">
-                    math
-                </a>
-                
-                
-            </span>
-            <div class="ga-content_body">
-                <p>--一个集合加上一个运算规则就是一个代数结构.</p>
-<h4>合成法则</h4>
-<p>集合$S$上的一个<strong>合成法则</strong>（又称二元运算） $F$ 是指一个映射：</p>
-<p>​       $ S \times S \rightarrow S$</p>
-<p>$S\times S$为$S$与$S$的<strong>笛卡尔积</strong>，其中的元素为有序对$(a,b):a,b\in S$</p>
-<p>即把 $S$ 中的元素 $a,b$ 变换成 $S$ 中的另外一个元素.</p>
-<blockquote><p>一个合成法则作用在元素对$(a,b)$上的结果通常用$ab,a\times b,a+b,a \circ b$表示.</p>
-<p>（任何采用某种记号的结果都可以以另一种记号改写）</p>
-<p>通常先求值括号里的表达式.</p>
-</blockquote>
-<p>合成法则的<strong>结合律</strong>是指：</p>
-<p>​       $(ab)c = a(bc)$</p>
-<p>合成法则的<strong>交换律</strong>是指：</p>
-<p>​       $ab = ba$</p>
-<h4>【2.1.1】命题：</h4>
-<p>若集合$S$上的合成法则<strong>满足结合率</strong>，则有唯一一种方式来定义$S$中任意$n$个元素</p>
-<p>​       $a_1,a_2,\dots,a_n$</p>
-<p>的乘积，暂时记作$[a_1a_2\dots a_n]$，</p>
-<p>（即$S$中$n$个元素乘积的结果与加括号的次序无关）</p>
-<p>这个乘积有以下性质：</p>
-<blockquote><p>$(i)$：一个元素的乘积是其自身：$[a_1]=a_1$.</p>
-<p>$(ii)$：两个元素的积$[a_1a_2]$由合成法则给出.</p>
-<p>$(iii)$：对于任意整数$i$：$1\leqslant i < n$，有</p>
-<p>​      $[a_1,a_2\dots a_n] = [a_1\dots a_i][a_{i+1}\dots a_n].$</p>
-<p>（补充说明：等号右边是先计算出$q=[a_1\dots a_i]$，$p=[a_{i+1}\dots a_n]$，再按合成法则计算$pq$）</p>
-</blockquote>
-<p>证明：</p>
-<blockquote><p>对$n$用数学归纳法.</p>
-<p>$(i),(ii)$已定义$n\leqslant 2$时的乘积.</p>
-<p>$n=2$时$(iii)$成立.</p>
-<p>假设对于所有$r\leqslant n-1,r\in Z^{+}$已经定义了$r$个元素的乘积，且乘积是唯一的并满足$(iii)$，</p>
-<p>按照$[a_1\dots a_n] = [a_1\dots a_{n-1}][a_n]$定义$n$个元素的乘积.</p>
-<p>对于$i < n-1, i \in Z^{+} $ ，</p>
-<p>$$ \begin{aligned} [a_1 \dots a_n] &= [a_1 \dots a_{n-1}][a_n] \\  &= ([a_1 \dots a_i][a_{i+1} \dots a_{n-1}])[a_n] \\ &= [a_1  \dots a_i]([a_{i+1} \dots a_{n-1}][a_n]) \\ &= [a_1 \dots  a_i][a_{i+1} \dots a_n] \end{aligned} $$</p>
-<p>故$(iii)$对于$n$成立.</p>
-<p>证毕.</p>
-</blockquote>
-<p>现在起表示乘积（只用于有结合率的合成法则）直接记作$a_1\dots a_n$.</p>
-<p>元素$e\in S$称为（$S$上的）合成法则的<strong>恒等元</strong>，若$e$满足</p>
-<p>​       对任意$a\in S$，$ea = a = ae$</p>
-<p>（$e$在合成法则为乘法时通常记为$1$，在合成法则为加法时通常记为$0$）</p>
-<p>若$S$上有一个<strong>满足结合率</strong>且有恒等元$1$的合成法则（记作乘法），</p>
-<p>$a\in  S$是可逆的，若有$b \in S$使得</p>
-<p>​       $ab=1$ 与 $ba=1$</p>
-<p>如果上式成立，则$b$称为$a$的<strong>逆</strong>。</p>
-<p><strong>逆的性质</strong></p>
-<ul>
-<li><p>如果$a$有左逆$l$与右逆$r$，即$la=1$与$ar=1$，则$l=r$，$a$是可逆的，且$r$是$a$的逆.</p>
-</li>
-<li><p>若$a$是可逆的，则其逆是唯一的.（所以可以把元素$a$的逆记为$a^{-1}$或$-a$）</p>
-</li>
-<li><p>若$a,b$均可逆，则乘积$ab$可逆，且</p>
-</li>
-</ul>
-<p>​               $(ab)^{-1} = b^{-1}a^{-1}$.</p>
-<ul>
-<li>一个不可逆的元素$a$可以有左逆或右逆.</li>
-</ul>
-<p>幂记号：</p>
-<ul>
-<li>对于$n\in Z^+$，$a^n = \underbrace{a\dots a}_{n个a}$，$a^{-n} = a^{-1}\dots a^{-1} = (a^n)^{-1}$.</li>
-<li>幂运算律（$a^r a^s = a^{r+s},(a^r)^s=a^{rs}$）成立.</li>
-<li>合成法则为加法时，幂运算记号$a^n$通常改为$na = \underbrace{a+\dots + a}_{n个a}$</li>
-</ul>
-<h4>群 与 子群</h4>
-<p>一个<strong>群</strong>是一个</p>
-
-            </div>
-        </article>
-        <div id="ga-tags">
     
-    <span class="ga-tag">
-        <a class="ga-highlight" href="/MyBlog/tag/math/">#math</a>
-    </span>
-    
-    <span class="ga-tag">
-        <a class="ga-highlight" href="/MyBlog/tag/algebra/">#algebra</a>
-    </span>
-    
-</div>
-    </section>
 
-    
-<section id="ga-content_pager">
-
-    <div class="next">
-        <a class="ga-highlight" href="/MyBlog/archives/coding/">自己做一个带grub引导的，可以开起OS的img！(踩坑记录)</a>
-        <p class="yue">自己做一个带grub引导的，可以开起OS的img！(踩坑记录)</p>
-    </div>
-
-
-    <div class="prev">
-        <a class="ga-highlight" href="/MyBlog/archives/typography/">Hello World!</a>
-        <p class="yue">这是一篇示例文章，在这里你可以看到常用页面元素的显示效果。</p>
-    </div>
-
+<section id="ga-archive_list" class="ga-section" data-title="#coding">
+    <ul>
+        
+        <li>
+            <h1><a target="_self" class="ga-highlight" href="/MyBlog/archives/coding/">自己做一个带grub引导的，可以开起OS的img！(踩坑记录)</a></h1>
+            <time class="ga-mono" datetime="2020-01-06T09:03:00-00.00">
+                2020-01-06
+            </time>
+        </li>
+        
+    </ul>
 </section>
 
-
+<section class="ga-section ga-mono" id="ga-pager">
     
+    <span>Page 1 of 1</span>
+    
+</section>
+
 
 </main>
 
