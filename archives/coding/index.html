@@ -17,7 +17,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/f59f9e8840db7a62d9c1282e73a3d48f.json"
+            api: "https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/102259d9f1ce442cf1616abb0be5e06b.json"
         }
     </script>
     
@@ -157,7 +157,10 @@ grub&gt; quit
 <h3>0x07: 解除img与loop设备的关联</h3>
 <div class="highlight"><pre><span></span>losetup -d /dev/loop3
 </pre></div>
-<p>一个脚本：</p>
+<p>结束！
+现在它可以用了1</p>
+<p><strong>附：</strong>
+一个脚本：</p>
 <div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">bs</span><span class="o">=</span><span class="m">512</span> <span class="nv">count</span><span class="o">=</span><span class="m">2880</span> <span class="nv">of</span><span class="o">=</span>floppy.img
 
