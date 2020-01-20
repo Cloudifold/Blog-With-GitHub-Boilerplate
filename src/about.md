@@ -16,6 +16,4 @@ tags:
 
 ## Contact
 
-My TIM/QQ : --/--/--
-My WX : -/-/-/--
-My Telegram : -/--/--/-
+qwq~
