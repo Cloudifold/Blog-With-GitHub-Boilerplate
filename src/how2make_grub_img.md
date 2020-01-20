@@ -3,7 +3,7 @@ title: 自己做一个带grub引导的，可以开起OS的img！(踩坑记录)
 slug: coding
 date: 2020/01/06 9:3:00
 status: publish
-author: CLD
+author: cldfd
 categories: 
   - coding
 tags: 
