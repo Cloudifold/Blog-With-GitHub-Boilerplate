@@ -30,9 +30,9 @@ external_links = [
         "brief": "🏄‍ Go My Own Way."
     },
     {
-        "name": "三無計劃",
-        "url": "https://www.imalan.cn",
-        "brief": "熊猫小A的主页。"
+        "name": "朋友们",
+        "url": "${site_prefix}friends/",
+        "brief": "cldfd的朋友们"
     }
 ]
 nav = [
@@ -49,6 +49,11 @@ nav = [
     {
         "name": "关于",
         "url": "${site_prefix}about/",
+        "target": "_self"
+    },
+    {
+        "name": "友链",
+        "url": "${site_prefix}friends/",
         "target": "_self"
     }
 ]
