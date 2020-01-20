@@ -4,7 +4,7 @@ title: 关于
 slug: about
 date: 2017/06/28 17:26:00
 status: publish
-author: CLD
+author: cldfd
 categories: 
   - about
 tags: 
@@ -16,5 +16,6 @@ tags:
 
 ## Contact
 
-qwq~
-
+My TIM/QQ : --/--/--
+My WX : -/-/-/--
+My Telegram : -/--/--/-
