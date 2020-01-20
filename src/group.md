@@ -3,7 +3,7 @@ title: Algebra-Chapter1-Group
 slug: math
 date: 2020/01/06 9:3:00
 status: publish
-author: CLD
+author: cldfd
 categories: 
   - math
 tags: 
