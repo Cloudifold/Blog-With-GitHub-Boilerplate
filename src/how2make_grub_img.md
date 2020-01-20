@@ -10,7 +10,6 @@ tags:
   - coding
   - boot_load
 ---
-## 自己做一个带grub引导的，可以开起OS的img！(踩坑记录)
 
 ### 0x01: GET grubFILE
 
