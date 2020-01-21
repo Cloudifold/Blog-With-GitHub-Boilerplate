@@ -1,7 +1,7 @@
 ---
 title: 自己做一个带grub引导的，可以开起OS的img！(踩坑记录)
 slug: coding
-date: 2020/01/06 9:3:00
+date: 2020/01/21 15:37:00
 status: publish
 author: cldfd
 categories: 
@@ -10,6 +10,12 @@ tags:
   - coding
   - boot_load
 ---
+
+### 0x00: 环境介绍
+
+linux kali 2019.4 kde
+
+ubuntu 以及其他linux发行版应该也可以用，毕竟用的远古版本的grub.
 
 ### 0x01: GET grubFILE
 
