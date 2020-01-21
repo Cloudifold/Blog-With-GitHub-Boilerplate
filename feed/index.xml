@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>CLD's BLOG</title><link>/MyBlog/</link><description>test des</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>${static_prefix}logo.png</url><title>CLD's BLOG</title><link>/MyBlog/</link></image><language>zh-CN</language><lastBuildDate>Mon, 20 Jan 2020 03:32:34 +0806</lastBuildDate><pubDate>Mon, 20 Jan 2020 03:32:34 +0806</pubDate><item><title>Algebra-Chapter1-Group</title><link>/MyBlog/archives/math/</link><description>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>CLD's BLOG</title><link>/MyBlog/</link><description>test des</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>${static_prefix}logo.png</url><title>CLD's BLOG</title><link>/MyBlog/</link></image><language>zh-CN</language><lastBuildDate>Tue, 21 Jan 2020 07:39:56 +0806</lastBuildDate><pubDate>Tue, 21 Jan 2020 07:39:56 +0806</pubDate><item><title>Algebra-Chapter1-Group</title><link>/MyBlog/archives/math/</link><description>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
 &lt;h4&gt;合成法则&lt;/h4&gt;
 &lt;p&gt;集合$S$上的一个&lt;strong&gt;合成法则&lt;/strong&gt;（又称二元运算） $F$ 是指一个映射：&lt;/p&gt;
 &lt;p&gt;​       $ S \times S \rightarrow S$&lt;/p&gt;
@@ -65,7 +65,10 @@
 &lt;/ul&gt;
 &lt;h4&gt;群 与 子群&lt;/h4&gt;
 &lt;p&gt;一个&lt;strong&gt;群&lt;/strong&gt;是一个&lt;/p&gt;
-</description><author>hi@imalan.cn (cldfd)</author><guid isPermaLink="true">/MyBlog/archives/math/</guid><pubDate>Mon, 06 Jan 2020 09:03:00 +0806</pubDate></item><item><title>自己做一个带grub引导的，可以开起OS的img！(踩坑记录)</title><link>/MyBlog/archives/coding/</link><description>&lt;h3&gt;0x01: GET grubFILE&lt;/h3&gt;
+</description><author>hi@imalan.cn (cldfd)</author><guid isPermaLink="true">/MyBlog/archives/math/</guid><pubDate>Mon, 06 Jan 2020 09:03:00 +0806</pubDate></item><item><title>自己做一个带grub引导的，可以开起OS的img！(踩坑记录)</title><link>/MyBlog/archives/coding/</link><description>&lt;h3&gt;0x00: 环境介绍&lt;/h3&gt;
+&lt;p&gt;linux kali 2019.4 kde&lt;/p&gt;
+&lt;p&gt;ubuntu 以及其他linux发行版应该也可以用，毕竟用的远古版本的grub.&lt;/p&gt;
+&lt;h3&gt;0x01: GET grubFILE&lt;/h3&gt;
 &lt;p&gt;&lt;a href="[ftp://alpha.gnu.org/gnu/grub/grub-0.97-i386-pc.tar.gz](ftp://alpha.gnu.org/gnu/grub/grub-0.97-i386-pc.tar.gz"&gt;grub-0.97-i386&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;其他也可以，但是记作一定要用编译好的版本（或者自己编译）&lt;/p&gt;
 &lt;p&gt;不然后面grub setup会失败……QaQ&lt;/p&gt;
@@ -171,4 +174,4 @@ losetup -d /dev/loop3
 &lt;p&gt;&lt;a href="https://blog.csdn.net/RichardGreenhhh/article/details/78087066"&gt;https://blog.csdn.net/RichardGreenhhh/article/details/78087066&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://blog.csdn.net/embed2010/article/details/6010919"&gt;https://blog.csdn.net/embed2010/article/details/6010919&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://blog.csdn.net/oXueFeiDeYu/article/details/42317939"&gt;https://blog.csdn.net/oXueFeiDeYu/article/details/42317939&lt;/a&gt;&lt;/p&gt;
-</description><author>hi@imalan.cn (cldfd)</author><guid isPermaLink="true">/MyBlog/archives/coding/</guid><pubDate>Mon, 06 Jan 2020 09:03:00 +0806</pubDate></item></channel></rss>
+</description><author>hi@imalan.cn (cldfd)</author><guid isPermaLink="true">/MyBlog/archives/coding/</guid><pubDate>Tue, 21 Jan 2020 15:37:00 +0806</pubDate></item></channel></rss>
