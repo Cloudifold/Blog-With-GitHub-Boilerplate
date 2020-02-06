@@ -11,6 +11,6 @@ tags:
   - friends
 ---
 
-binLep : https://binlep.github.io/
+[binLep](https://binlep.github.io/) : binLep的blog！
 
-lrcno6 : https://lrcno6.github.io/
+[lrcno6](https://lrcno6.github.io/) : lrcno6的Blog！
