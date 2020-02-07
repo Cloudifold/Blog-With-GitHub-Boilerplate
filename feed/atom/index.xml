@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/MyBlog/</id><title>CLD's BLOG</title><updated>2020-02-06T12:13:43.761727+08:06</updated><author><name>CLD</name><email>hi@imalan.cn</email></author><link href="/MyBlog/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><logo>${static_prefix}logo.png</logo><subtitle>No judge</subtitle><entry><id>/MyBlog/archives/math/</id><title>Algebra-Chapter1-Group</title><updated>2020-02-06T12:13:43.761823+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/MyBlog/</id><title>CLD's BLOG</title><updated>2020-02-07T09:27:50.424334+08:06</updated><author><name>CLD</name><email>hi@imalan.cn</email></author><link href="/MyBlog/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><logo>${static_prefix}logo.png</logo><subtitle>No judge</subtitle><entry><id>/MyBlog/archives/math/</id><title>Algebra-Chapter1-Group</title><updated>2020-02-07T09:27:50.424436+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
 &lt;h4&gt;合成法则&lt;/h4&gt;
 &lt;p&gt;集合$S$上的一个&lt;strong&gt;合成法则&lt;/strong&gt;（又称二元运算） $F$ 是指一个映射：&lt;/p&gt;
 &lt;p&gt;​       $ S \times S \rightarrow S$&lt;/p&gt;
@@ -65,7 +65,7 @@
 &lt;/ul&gt;
 &lt;h4&gt;群 与 子群&lt;/h4&gt;
 &lt;p&gt;一个&lt;strong&gt;群&lt;/strong&gt;是一个&lt;/p&gt;
-</content><link href="/MyBlog/archives/math/" rel="alternate"/><published>2020-01-06T09:03:00+08:06</published></entry><entry><id>/MyBlog/archives/coding/</id><title>自己做一个带grub引导的，可以开起OS的img！(踩坑记录)</title><updated>2020-02-06T12:13:43.761779+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;h3&gt;0x00: 环境介绍&lt;/h3&gt;
+</content><link href="/MyBlog/archives/math/" rel="alternate"/><published>2020-01-06T09:03:00+08:06</published></entry><entry><id>/MyBlog/archives/coding/</id><title>自己做一个带grub引导的，可以开起OS的img！(踩坑记录)</title><updated>2020-02-07T09:27:50.424388+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;h3&gt;0x00: 环境介绍&lt;/h3&gt;
 &lt;p&gt;linux kali 2019.4 kde&lt;/p&gt;
 &lt;p&gt;ubuntu 以及其他linux发行版应该也可以用，毕竟用的远古版本的grub.&lt;/p&gt;
 &lt;h3&gt;0x01: GET grubFILE&lt;/h3&gt;
