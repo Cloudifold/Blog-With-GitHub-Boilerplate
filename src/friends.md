@@ -19,7 +19,9 @@ tags:
 
 [NightRain](https://rainx.top/) : 是CSP大佬！
 
-[binLep](https://binlep.github.io/) : binLep的blog！
+[binLep](https://binlep.github.io/) : 软工专业的pwn大佬！
 
-[lrcno6](https://lrcno6.github.io/) : lrcno6的Blog！
+[lrcno6](https://lrcno6.github.io/) : 超强高中生
+
+[江程训](https://censujiang.com) : 技术宅，漫宅和伪娘于一身的废萌聚合体。
 
