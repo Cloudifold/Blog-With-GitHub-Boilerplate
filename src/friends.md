@@ -27,3 +27,5 @@ tags:
 
 [Alpha1022](https://www.alpha1022.me) : 可爱的初中生OIer
 
+[yizr-cnyali](https://yizr-cnyali.ac) : 同学qwq
+
