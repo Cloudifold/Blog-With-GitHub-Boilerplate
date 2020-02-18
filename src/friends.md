@@ -25,3 +25,5 @@ tags:
 
 [江程训](https://censujiang.com) : 技术宅，漫宅和伪娘于一身的废萌聚合体。
 
+[Alpha1022](https://www.alpha1022.me) : 可爱的初中生OIer
+
