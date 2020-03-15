@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>CLD's BLOG</title><link>/MyBlog/</link><description>No judge</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>${static_prefix}logo2.jpg</url><title>CLD's BLOG</title><link>/MyBlog/</link></image><language>zh-CN</language><lastBuildDate>Sat, 14 Mar 2020 08:03:55 +0806</lastBuildDate><pubDate>Sat, 14 Mar 2020 08:03:55 +0806</pubDate><item><title>Algebra-Chapter1-Group</title><link>/MyBlog/archives/math/</link><description>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>CLD's BLOG</title><link>/MyBlog/</link><description>No judge</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>${static_prefix}logo2.jpg</url><title>CLD's BLOG</title><link>/MyBlog/</link></image><language>zh-CN</language><lastBuildDate>Sun, 15 Mar 2020 16:11:41 +0806</lastBuildDate><pubDate>Sun, 15 Mar 2020 16:11:41 +0806</pubDate><item><title>Algebra-Chapter1-Group</title><link>/MyBlog/archives/math/</link><description>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
 &lt;h4&gt;合成法则&lt;/h4&gt;
 &lt;p&gt;集合$S$上的一个&lt;strong&gt;合成法则&lt;/strong&gt;（又称二元运算） $F$ 是指一个映射：&lt;/p&gt;
 &lt;p&gt;​       $ S \times S \rightarrow S$&lt;/p&gt;
@@ -190,4 +190,57 @@ losetup -d /dev/loop3
 &lt;p&gt;经历了这些之后我早就无法自由表达了……&lt;/p&gt;
 &lt;p&gt;或者说……我还有自由吗？&lt;/p&gt;
 &lt;p&gt;这是什么样的牢笼？&lt;/p&gt;
-</description><author>hi@imalan.cn (cldfd)</author><guid isPermaLink="true">/MyBlog/archives/trivial-thoughts/</guid><pubDate>Sun, 01 Mar 2020 03:07:00 +0806</pubDate></item></channel></rss>
+</description><author>hi@imalan.cn (cldfd)</author><guid isPermaLink="true">/MyBlog/archives/trivial-thoughts/</guid><pubDate>Sun, 01 Mar 2020 03:07:00 +0806</pubDate></item><item><title>编译和安装Linux内核模块</title><link>/MyBlog/archives/trivial-thoughts/</link><description>&lt;p&gt;0x01--获取&lt;strong&gt;当前linux内核&lt;/strong&gt;源代码&lt;/p&gt;
+&lt;p&gt;直接&lt;code&gt;apt-get install linux-source&lt;/code&gt;（这样做会下载到&lt;code&gt;/lib/modules/$(shell uname -r)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;或者下载当前内核版本的源码（网上乱找）&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;获取内核版本 &lt;code&gt;uname -a&lt;/code&gt;或&lt;code&gt;uname -r&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;0x02--编写驱动程序的&lt;strong&gt;Makefile&lt;/strong&gt;文&lt;/p&gt;
+&lt;p&gt;把这个makefile和你的module放在同一个目录.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;ifneq ($(KERNELRELEASE),)&lt;/span&gt;
+&lt;span class="c"&gt;# complie &amp;lt;your module&amp;#39;s name&amp;gt;.c&lt;/span&gt;
+&lt;span class="c"&gt;# obj-m := &amp;lt;your module&amp;#39;s name&amp;gt;.o&lt;/span&gt;
+&lt;span class="nv"&gt;obj-m&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; hello.o
+&lt;span class="cp"&gt;else&lt;/span&gt;
+&lt;span class="c"&gt;# KERNELDIR := &amp;lt;your path to kernel&amp;gt;/build&lt;/span&gt;
+&lt;span class="nv"&gt;KERNELDIR&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; /lib/modules/&lt;span class="k"&gt;$(&lt;/span&gt;shell uname -r&lt;span class="k"&gt;)&lt;/span&gt;/build
+&lt;span class="nv"&gt;PWD&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;shell &lt;span class="nb"&gt;pwd&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+
+&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    make −C &lt;span class="k"&gt;$(&lt;/span&gt;KERNELDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; modules
+&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    make -C &lt;span class="k"&gt;$(&lt;/span&gt;KERNELDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; clean
+&lt;span class="c"&gt;# 缩进是必要的&lt;/span&gt;
+&lt;span class="cp"&gt;endif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;执行该Makefile文件时将跑到 KERNELDIR下调用make.&lt;/p&gt;
+&lt;p&gt;PWD指定要编译的驱动程序源文件所在的目录，$(shell pwd) 表示当前目录.&lt;/p&gt;
+&lt;p&gt;0x03--编写内核模块&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;linux/module.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;linux/kernel.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;linux/init.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;__init&lt;/span&gt; &lt;span class="nf"&gt;hello_init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello world&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;__exit&lt;/span&gt; &lt;span class="nf"&gt;hello_exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Goodbye world&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;module_init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hello_init&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="c1"&gt;// 指定模块初始化函数&lt;/span&gt;
+&lt;span class="n"&gt;module_exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hello_exit&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="c1"&gt;// 指定模块卸载(退出)函数&lt;/span&gt;
+
+&lt;span class="n"&gt;MODULE_LICENSE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;GPL&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;保存为&lt;code&gt;&amp;lt;module name&amp;gt;.c&lt;/code&gt;就可以啦.&lt;/p&gt;
+&lt;p&gt;(我这里是&lt;code&gt;hello.c&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;0x04--编译，安装，卸载，查看&lt;/p&gt;
+&lt;p&gt;编译：&lt;code&gt;make&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;安装：&lt;code&gt;insmod &amp;lt;module name&amp;gt;&lt;/code&gt;或&lt;code&gt;modprobe &amp;lt;module&amp;gt;&lt;/code&gt;(详细用法请参阅命令帮助和相关文档)&lt;/p&gt;
+&lt;p&gt;卸载：&lt;code&gt;rmmod &amp;lt;module name&amp;gt;&lt;/code&gt;或&lt;code&gt;modprobe -r &amp;lt;module name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查看：&lt;code&gt;lsmod | grep &amp;lt;module name&amp;gt;&lt;/code&gt; 、&lt;code&gt;modinfo &amp;lt;module name&amp;gt;.ko&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;（可以&lt;code&gt;dmesg&lt;/code&gt;查看&lt;code&gt;printk&lt;/code&gt;打印的消息）&lt;/p&gt;
+</description><author>hi@imalan.cn (cldfd)</author><guid isPermaLink="true">/MyBlog/archives/trivial-thoughts/</guid><pubDate>Mon, 16 Mar 2020 00:10:00 +0806</pubDate></item></channel></rss>
