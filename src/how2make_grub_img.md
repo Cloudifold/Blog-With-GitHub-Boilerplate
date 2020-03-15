@@ -8,7 +8,7 @@ categories:
   - coding
 tags: 
   - coding
-  - boot_load
+  - boot
 ---
 
 ### 0x00: 环境介绍
