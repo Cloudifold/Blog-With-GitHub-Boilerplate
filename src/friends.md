@@ -29,3 +29,4 @@ tags:
 
 [yizr-cnyali](https://yizr-cnyali.ac) : 同学qwq
 
+[moi](https://moi-mo.github.io/) : 技能点超多的~
