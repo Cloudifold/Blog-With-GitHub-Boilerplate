@@ -29,4 +29,4 @@ tags:
 
 [yizr-cnyali](https://yizr-cnyali.ac) : 同学qwq
 
-[moi](https://moi-mo.github.io/) : 技能点超多的~
+[moi](https://moi-mo.github.io/) : 一般通过女生
