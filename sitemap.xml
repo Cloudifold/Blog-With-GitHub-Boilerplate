@@ -21,7 +21,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 
     <url>
-        <loc>/MyBlog/archives/trivial-thoughts/</loc>
+        <loc>/MyBlog/archives/linux-kernel/make-kernel-module/</loc>
         <lastmod>2020-03-16</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>

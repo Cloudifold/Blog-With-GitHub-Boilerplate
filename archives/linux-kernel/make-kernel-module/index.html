@@ -21,19 +21,20 @@
         }
     </script>
     
-<title>CLD's BLOG</title>
-<meta name="author" content="CLD" />
-<meta name="description" content="No judge" />
-<meta property="og:title" content="CLD's BLOG" />
-<meta property="og:description" content="No judge" />
+<title>编译和安装Linux内核模块 - CLD's BLOG</title>
+<meta name="author" content="cldfd" />
+<meta name="description" content="0x01--获取当前linux内核源代码" />
+<meta property="og:title" content="编译和安装Linux内核模块 - CLD's BLOG" />
+<meta property="og:description" content="0x01--获取当前linux内核源代码" />
 <meta property="og:site_name" content="CLD's BLOG" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/MyBlog/" />
-<meta property="og:image" content="CLD's BLOG" />
-<meta name="twitter:title" content="CLD's BLOG" />
-<meta name="twitter:description" content="No judge" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/MyBlog/archives/linux-kernel/make-kernel-module/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2020-03-16T00:10:00-00.00" />
+<meta name="twitter:title" content="编译和安装Linux内核模块 - CLD's BLOG" />
+<meta name="twitter:description" content="0x01--获取当前linux内核源代码" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/logo2.jpg" />
+<meta name="twitter:image" content="" />
 
 
     
@@ -70,94 +71,109 @@
             <div class="wrapper">
                 
 <main>    
-    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">编译和安装Linux内核模块</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>cldfd</span>
+                <time>
+                    2020-03-16
+                </time>
+                
+                in <a no-style class="category" href="/MyBlog/category/coding/">
+                    coding
+                </a>
+                
+                
+            </span>
+            <div class="ga-content_body">
+                <p>0x01--获取<strong>当前linux内核</strong>源代码</p>
+<p>直接<code>apt-get install linux-source</code>（这样做会下载到<code>/lib/modules/$(shell uname -r)</code></p>
+<p>或者下载当前内核版本的源码（网上乱找）</p>
+<blockquote><p>获取内核版本 <code>uname -a</code>或<code>uname -r</code></p>
+</blockquote>
+<p>0x02--编写驱动程序的<strong>Makefile</strong>文</p>
+<p>把这个makefile和你的module放在同一个目录.</p>
+<div class="highlight"><pre><span></span><span class="cp">ifneq ($(KERNELRELEASE),)</span>
+<span class="c"># complie &lt;your module&#39;s name&gt;.c</span>
+<span class="c"># obj-m := &lt;your module&#39;s name&gt;.o</span>
+<span class="nv">obj-m</span> <span class="o">:=</span> hello.o
+<span class="cp">else</span>
+<span class="c"># KERNELDIR := &lt;your path to kernel&gt;/build</span>
+<span class="nv">KERNELDIR</span> <span class="o">:=</span> /lib/modules/<span class="k">$(</span>shell uname -r<span class="k">)</span>/build
+<span class="nv">PWD</span> <span class="o">:=</span> <span class="k">$(</span>shell <span class="nb">pwd</span><span class="k">)</span>
 
-<section id="ga-post_list" class="ga-section" data-title="Posts">
-    <ul>
-        
-        <li>
-            <article class="yue">
-                <h1>编译和安装Linux内核模块</h1>
-                
-                    <blockquote>0x01--获取当前linux内核源代码</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/MyBlog/archives/linux-kernel/make-kernel-module/">阅读全文</a></span>
-                    <time class="ga-mono">
-                        2020-03-16
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-        <li>
-            <article class="yue">
-                <h1>这是什么样的牢笼？</h1>
-                
-                    <blockquote>某个时候我开始在意起了别人的看法……</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/MyBlog/archives/trivial-thoughts/">阅读全文</a></span>
-                    <time class="ga-mono">
-                        2020-03-01
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-        <li>
-            <article class="yue">
-                <h1>自己做一个带grub引导的，可以开起OS的img！(踩坑记录)</h1>
-                
-                    <blockquote>0x00: 环境介绍</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/MyBlog/archives/coding/">阅读全文</a></span>
-                    <time class="ga-mono">
-                        2020-01-21
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-        <li>
-            <article class="yue">
-                <h1>Algebra-Chapter1-Group</h1>
-                
-                    <blockquote>--一个集合加上一个运算规则就是一个代数结构.</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/MyBlog/archives/math/">阅读全文</a></span>
-                    <time class="ga-mono">
-                        2020-01-06
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-    </ul>
+<span class="nf">all</span><span class="o">:</span>
+    make −C <span class="k">$(</span>KERNELDIR<span class="k">)</span> <span class="nv">M</span><span class="o">=</span><span class="k">$(</span>PWD<span class="k">)</span> modules
+<span class="nf">clean</span><span class="o">:</span>
+    make -C <span class="k">$(</span>KERNELDIR<span class="k">)</span> <span class="nv">M</span><span class="o">=</span><span class="k">$(</span>PWD<span class="k">)</span> clean
+<span class="c"># 缩进是必要的</span>
+<span class="cp">endif</span>
+</pre></div>
+<p>执行该Makefile文件时将跑到 KERNELDIR下调用make.</p>
+<p>PWD指定要编译的驱动程序源文件所在的目录，$(shell pwd) 表示当前目录.</p>
+<p>0x03--编写内核模块</p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;linux/module.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="cpf">&lt;linux/kernel.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="cpf">&lt;linux/init.h&gt;</span><span class="cp"></span>
+
+<span class="k">static</span> <span class="kt">int</span> <span class="n">__init</span> <span class="nf">hello_init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="n">printk</span><span class="p">(</span><span class="s">&quot;Hello world&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="n">__exit</span> <span class="nf">hello_exit</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="n">printk</span><span class="p">(</span><span class="s">&quot;Goodbye world&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">module_init</span><span class="p">(</span><span class="n">hello_init</span><span class="p">);</span><span class="c1">// 指定模块初始化函数</span>
+<span class="n">module_exit</span><span class="p">(</span><span class="n">hello_exit</span><span class="p">);</span><span class="c1">// 指定模块卸载(退出)函数</span>
+
+<span class="n">MODULE_LICENSE</span><span class="p">(</span><span class="s">&quot;GPL&quot;</span><span class="p">);</span>
+</pre></div>
+<p>保存为<code>&lt;module name&gt;.c</code>就可以啦.</p>
+<p>(我这里是<code>hello.c</code>)</p>
+<p>0x04--编译，安装，卸载，查看</p>
+<p>编译：<code>make</code></p>
+<p>安装：<code>insmod &lt;module name&gt;</code>或<code>modprobe &lt;module&gt;</code>(详细用法请参阅命令帮助和相关文档)</p>
+<p>卸载：<code>rmmod &lt;module name&gt;</code>或<code>modprobe -r &lt;module name&gt;</code></p>
+<p>查看：<code>lsmod | grep &lt;module name&gt;</code> 、<code>modinfo &lt;module name&gt;.ko</code></p>
+<p>（可以<code>dmesg</code>查看<code>printk</code>打印的消息）</p>
+
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/MyBlog/tag/coding/">#coding</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/MyBlog/tag/kernel/">#kernel</a>
+    </span>
+    
+</div>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <h3>没有了</h3>
+        <p class="yue">这是最新的文章</p>
+    </div>
+
+
+    <div class="prev">
+        <a class="ga-highlight" href="/MyBlog/archives/trivial-thoughts/">这是什么样的牢笼？</a>
+        <p class="yue">某个时候我开始在意起了别人的看法……</p>
+    </div>
+
 </section>
 
-<section class="ga-section ga-mono" id="ga-pager">
-    
-    <span>Page 1 of 1</span>
-    
-</section>
 
-<section id="ga-external_links" class="ga-section" data-title="Links">
-    <ul>
-        
-        <li>
-            <a class="ga-highlight" target="_blank" href="https://github.com/AlanDecode/Maverick">Maverick</a>：🏄‍ Go My Own Way.
-        </li>
-        
-        <li>
-            <a class="ga-highlight" target="_blank" href="/MyBlog/friends/">朋友们</a>：cldfd的朋友们
-        </li>
-        
-    </ul>
-</section>
-
+    
 
 </main>
 
