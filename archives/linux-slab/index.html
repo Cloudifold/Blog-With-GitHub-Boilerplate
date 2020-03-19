@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Galileo,blog" />
+    <meta name="generator" content="Maverick 1.0" />
+    <meta name="template" content="Galileo" />
+    <link rel="alternate" type="application/rss+xml" title="CLD's BLOG &raquo; RSS 2.0" href="/MyBlog/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="CLD's BLOG &raquo; ATOM 1.0" href="/MyBlog/feed/atom/index.xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/assets/galileo-ec40839efa.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <script>
+        var ExSearchConfig = {
+            root: "",
+            api: "https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/553c2eb5d2c43eaaf7d74ac275920230.json"
+        }
+    </script>
+    
+<title>cldfd的朋友们 - CLD's BLOG</title>
+<meta name="author" content="cldfd" />
+<meta name="description" content="0.前置说明" />
+<meta property="og:title" content="cldfd的朋友们 - CLD's BLOG" />
+<meta property="og:description" content="0.前置说明" />
+<meta property="og:site_name" content="CLD's BLOG" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/MyBlog/archives/linux-slab/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2020-03-19T19:05:00-00.00" />
+<meta name="twitter:title" content="cldfd的朋友们 - CLD's BLOG" />
+<meta name="twitter:description" content="0.前置说明" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="" />
+
+
+    
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+<link rel="shortcut icon" href="./favicon.ico">
+
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            <header id="ga-header">
+                <div first>
+                    <aside id="ga-logo">
+                        <a href="/MyBlog/" target="_self">
+                            <img src="https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/logo2.jpg" alt="CLD's BLOG">
+                        </a>
+                    </aside>
+                    <aside id="ga-brand">
+                        <h1 class="brand"><a class="no-style" href="/MyBlog/">CLD's BLOG</a></h1>
+                        <p>No judge</p>
+                    </aside>
+                </div>
+                <div second id="ga-nav">
+                    <nav class="navs">
+                        <ul><li><a class="ga-highlight" href="/MyBlog/" target="_self">首页</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/MyBlog/archives/" target="_self">归档</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/MyBlog/about/" target="_self">关于</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/MyBlog/friends/" target="_self">友链</a></li><span class="separator">·</span><li><a href="#" target="_self" class="search-form-input ga-highlight">搜索</a></li></ul>
+                    </nav>
+                    <nav class="social-links">
+                        <ul><li><a class="no-style" title="Twitter" href="" target="_blank"><i class="gi gi-twitter"></i>Twitter</a></li><span class="separator">·</span><li><a class="no-style" title="GitHub" href="https://github.com/Cloudifold" target="_blank"><i class="gi gi-github"></i>GitHub</a></li><span class="separator">·</span><li><a class="no-style" title="Weibo" href="" target="_blank"><i class="gi gi-weibo"></i>Weibo</a></li></ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="wrapper">
+                
+<main>    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">cldfd的朋友们</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>cldfd</span>
+                <time>
+                    2020-03-19
+                </time>
+                
+                in <a no-style class="category" href="/MyBlog/category/coding/">
+                    coding
+                </a>
+                
+                
+            </span>
+            <div class="ga-content_body">
+                <h1><strong>0.前置说明</strong></h1>
+<p>(为什么要扯缓存呢？因为slab分配器实际上就是一种缓存)</p>
+<p><strong>缓存</strong>：缓存是一种用于"存放并管理可用的、<strong>已分配好</strong>的对象"的对象。</p>
+<p>缓存是为了方便对象的频繁分配(创建)与回收(销毁)而存在的。</p>
+<p>对缓存来说重要的是存储(不然为什么叫缓存呢)，当代码需要新的对象时可以直接从缓存中获取，而代码不再需要这个对象时就把它放回缓存。</p>
+<p>简单来说缓存就像存纸的纸堆，对象就相当于一张纸。 代码需要操作对象(在纸上写字)就要从纸堆中抽纸，纸不用了就擦干净(放回缓存)之后放回纸堆。 不使用缓存就像用纸时从造纸厂拿纸(分配对象)，不用纸了就放回造纸厂回炉(销毁对象)一样效率低下。</p>
+<p>一般会专门为某一种对象提供缓存，比如专为inode结构体设立的缓存。当代码要分配一个新的inode时就从这个缓存中获取。</p>
+<p>用空闲链表来实现缓存是比较方便的一种选择。</p>
+<p>在<strong>内核</strong>中，空闲链表面临的主要问题之一是<strong>不能全局控制</strong>。当可用内存紧缺时，内核无法通知空闲链表，让空闲链表收缩缓存的大小以便释放部分内存。</p>
+<p>为了弥补这一缺陷，Linux提供了slab分配器来<strong>实现</strong>缓存。</p>
+<hr>
+<h1><strong>1.slab分配器的基本设计思想</strong></h1>
+<p>摘自《LINUX内核设计与实现》</p>
+<blockquote><p>slab分配器试图在几个基本原则间寻求平衡：</p>
+</blockquote>
+<ul>
+<li>频繁使用的数据结构也会频繁分配和释放，所以应当缓存它们。</li>
+<li>频繁分配和回收必然会频繁分配和释放必然导致内存碎片（难以找到大块连续的可用内存）。为了避免这种现象，空闲链表的缓存会连续地存放。因为已释放的数据结构又会放回空闲链表，因此不会导致碎片。</li>
+<li>回收的对象可以立刻投入下一次分配，因此，对于频繁的分配和释放，空闲链表能够提高其性能。</li>
+<li>如果分配器知道对象大小，页大小和总的高速缓存的大小这样的概念，它回做出更明智的决策。</li>
+<li>如果让部分缓存专属于单个处理器（对系统上的每个处理器独立且唯一），那么，分配和释放就可以在不加SMP锁的情况下进行。</li>
+<li>如果分配器是于NUMA相关的，它就可以从相同的内存节点为请求者进行分配。</li>
+<li>对存放的对象进行着色（colored），以防多个对象映射到相同的高速缓存行（cache line）。</li>
+</ul>
+<hr>
+<h1><strong>2.slab层的设计</strong></h1>
+<p>slab层把不同的对象划分为<strong>高速缓存</strong>(kmem_cache)组，每个高速缓存都存放不同类型的对象。</p>
+<p>比如说，一个高速缓存用来存放inode结构体。</p>
+<p>然后，这些高速缓存被划分为slab，slab由一个或多个<strong>物理上连续的页</strong>组成。</p>
+<p>每个slab包含一些对象的实例，每个slab有三种状态：空、部分满、满。一个满的slab没有空闲的对象，一个空的slab所有对象都是空闲的。</p>
+<p>内核某一部分需要一个新的对象时，slab分配器会优先从部分满的slab中分配。如果没有部分满的slab就从空的slab中分配。如果没有空的slab就创建一个空的slab。</p>
+<hr>
+<h1><strong>3.使用slab</strong></h1>
+<p><strong>本文使用内核版本为linux-source-5.4</strong></p>
+<p>为了使用slab，我们首先需要为一种对象创建一个高速缓存(kmem_cache)。</p>
+<p>调用<code>`kmem_cache_create</code>创建一个高速缓存(在<code>include/linux/slab.h</code>第395行声明)</p>
+
+<pre><code>struct kmem_cache *kmem_cache_create(const char *name, unsigned int size,
+            unsigned int align, slab_flags_t flags,
+            void (*ctor)(void *));</code></pre>
+<p>返回一个指向<code>struct kmem_cache</code>类型的指针。</p>
+<p>要分配空间的话只需要调用<code>kmem_cache_alloc</code>函数(在<code>include/linux/slab.h</code>第394行声明)。</p>
+<p>这个过程其实就使用了slab分配器分配空间。</p>
+
+<pre><code>void *kmem_cache_alloc(struct kmem_cache *, gfp_t flags) __assume_slab_alignment __malloc;</code></pre>
+<p>这个函数以一个指向<code>struct kmem_cache</code>类型的指针和一个标志(flags)来分配空间，返回一个指向<code>void</code>类型的指针。</p>
+<p>这样你就可以得到一个大小为<code>size</code>的可用空间(这个size是kmem_cache_alloc根据第一个参数决定的)。</p>
+<p>可以通过<code>kmem_cache_free</code>来释放你得到的空间(在<code>include/linux/slab.h</code>第395行声明)。</p>
+
+<pre><code>void kmem_cache_free(struct kmem_cache *, void *);/* 后面这个是那个分配得来的指针 */</code></pre>
+<p>调用函数<code>kmem_cache_destroy</code>销毁你创建的<code>kmem_cache</code>结构体(在<code>include/linux/slab.h</code>第165行声明)。</p>
+
+<pre><code>void kmem_cache_destroy(struct kmem_cache *);</code></pre>
+<p>我们可以写出以下代码示例来使用slab分配器分配结构体。</p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;linux/init.h&gt; </span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;linux/module.h&gt; </span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;linux/module.h&gt; </span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;linux/unistd.h&gt;</span><span class="cp"></span>
+<span class="c1">//#include &lt;sys/type.h&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;linux/slab.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;linux/slab_def.h&gt;</span><span class="cp"></span>
+<span class="n">MODULE_LICENSE</span><span class="p">(</span><span class="s">&quot;GPL&quot;</span><span class="p">);</span>  
+
+<span class="cp">#define OBJNUM   1000     </span><span class="cm">/* the number of objects to be allocated */</span><span class="cp"></span>
+<span class="cp">#define PRINT_INTERVAL 250</span>
+
+<span class="k">static</span> <span class="kt">int</span> <span class="n">sample_struct_num</span><span class="p">;</span> <span class="cm">/* how many times sample_struct_ctor will be used */</span>
+
+
+<span class="k">struct</span> <span class="n">sample_struct</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">firstname</span><span class="p">[</span><span class="mh">0x10</span><span class="p">];</span>
+    <span class="kt">char</span> <span class="n">lastname</span><span class="p">[</span><span class="mh">0x10</span><span class="p">];</span>
+<span class="p">};</span>
+
+
+<span class="k">static</span> <span class="k">struct</span> <span class="n">kmem_cache</span> <span class="o">*</span><span class="n">sample_struct_cachep</span><span class="p">;</span>
+
+<span class="cm">/* store pointers points struct sample_struct */</span>
+<span class="k">static</span> <span class="k">struct</span> <span class="n">sample_struct</span> <span class="o">*</span><span class="n">sample_struct_pool</span><span class="p">[</span><span class="n">OBJNUM</span><span class="p">];</span>
+
+<span class="cm">/* constructor of struct_ctor */</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="nf">sample_struct_ctor</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">cachep</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="p">((</span><span class="k">struct</span> <span class="n">sample_struct</span> <span class="o">*</span><span class="p">)</span><span class="n">cachep</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">id</span> <span class="o">=</span> <span class="n">sample_struct_num</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">++</span><span class="n">sample_struct_num</span> <span class="o">%</span><span class="n">PRINT_INTERVAL</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printk</span> <span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">&quot;inited %d objects&quot;</span><span class="p">,</span> <span class="n">sample_struct_num</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="k">static</span> <span class="kt">void</span> <span class="nf">print_kmem_cache_info_qwq</span><span class="p">(</span><span class="k">struct</span> <span class="n">kmem_cache</span> <span class="o">*</span><span class="n">cachep</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printk</span> <span class="p">(</span><span class="s">&quot;kmem_cache size : 0x%x</span><span class="se">\\</span><span class="s">n&quot;</span><span class="p">,</span> <span class="n">kmem_cache_size</span> <span class="p">(</span><span class="n">cachep</span><span class="p">));</span>
+    <span class="n">printk</span> <span class="p">(</span><span class="s">&quot;kmem_cache name : %s</span><span class="se">\\</span><span class="s">n&quot;</span><span class="p">,</span> <span class="n">cachep</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">);</span>
+    <span class="n">printk</span> <span class="p">(</span><span class="s">&quot;kmem_cache flags : 0x%x</span><span class="se">\\</span><span class="s">n&quot;</span><span class="p">,</span> <span class="n">cachep</span><span class="o">-&gt;</span><span class="n">flags</span><span class="p">);</span>
+    <span class="n">printk</span> <span class="p">(</span><span class="s">&quot;kmem_cache num of objs per slab : 0x%x</span><span class="se">\\</span><span class="s">n&quot;</span><span class="p">,</span> <span class="n">cachep</span><span class="o">-&gt;</span><span class="n">num</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="k">static</span> <span class="kt">int</span> <span class="nf">sample_mod_init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">sample_struct_cachep</span> <span class="o">=</span> <span class="n">kmem_cache_create</span> <span class="p">(</span>
+            <span class="s">&quot;sample_struct_cachep&quot;</span><span class="p">,</span>         <span class="cm">/* Name */</span>
+            <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">sample_struct</span><span class="p">),</span>   <span class="cm">/* Object Size */</span>
+            <span class="mi">0</span><span class="p">,</span>                              <span class="cm">/* Alignment */</span>
+            <span class="n">SLAB_HWCACHE_ALIGN</span><span class="p">,</span>             <span class="cm">/* Flags */</span>
+            <span class="n">sample_struct_ctor</span><span class="p">);</span>            <span class="cm">/* Constructor */</span>
+
+    <span class="cm">/* check if fail */</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">NULL</span> <span class="o">==</span> <span class="n">sample_struct_cachep</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printk</span> <span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">&quot;Failed to create sample_struct_cachep. -- module slabtest_qwq</span><span class="se">\\</span><span class="s">n&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* print cache info */</span>
+    <span class="n">print_kmem_cache_info_qwq</span> <span class="p">(</span><span class="n">sample_struct_cachep</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">OBJNUM</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="cm">/* allcote structs */</span>
+        <span class="n">sample_struct_pool</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">kmem_cache_alloc</span> <span class="p">(</span><span class="n">sample_struct_cachep</span><span class="p">,</span> <span class="n">GFP_KERNEL</span><span class="p">);</span>
+
+        <span class="cm">/* print message if fail */</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">NULL</span> <span class="o">==</span> <span class="n">sample_struct_pool</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="p">{</span>
+            <span class="n">printk</span> <span class="p">(</span><span class="s">&quot;Object %d alloc ERROR.  -- module slabtest_qwq </span><span class="se">\\</span><span class="s">n&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+            <span class="n">sample_struct_pool</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="n">PRINT_INTERVAL</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printk</span> <span class="p">(</span><span class="s">&quot;sample_struct_pool[%d]-&gt;id = %d&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">sample_struct_pool</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>   
+<span class="n">print_kmem_cache_info_qwq</span> <span class="p">(</span><span class="n">sample_struct_cachep</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="k">static</span> <span class="kt">void</span> <span class="nf">sample_mod_exit</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">printk</span> <span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">&quot;Destroying sample_structs!</span><span class="se">\\</span><span class="s">n&quot;</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">OBJNUM</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="cm">/* check */</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">sample_struct_pool</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">kmem_cache_free</span> <span class="p">(</span><span class="n">sample_struct_cachep</span><span class="p">,</span> <span class="n">sample_struct_pool</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+            <span class="n">sample_struct_pool</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">sample_struct_cachep</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> 
+    <span class="p">{</span>
+        <span class="cm">/* destroy */</span>
+        <span class="n">kmem_cache_destroy</span> <span class="p">(</span><span class="n">sample_struct_cachep</span><span class="p">);</span>
+        <span class="n">printk</span> <span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">&quot;Destroyed sample_struct_cachep!</span><span class="se">\\</span><span class="s">n&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">print_kmem_cache_info_qwq</span> <span class="p">(</span><span class="n">sample_struct_cachep</span><span class="p">);</span>
+    <span class="k">return</span> <span class="p">;</span>
+<span class="p">}</span> 
+
+<span class="n">module_init</span> <span class="p">(</span><span class="n">sample_mod_init</span><span class="p">);</span> 
+<span class="n">module_exit</span> <span class="p">(</span><span class="n">sample_mod_exit</span><span class="p">);</span>
+
+<span class="n">MODULE_AUTHOR</span> <span class="p">(</span><span class="s">&quot;cldfd&quot;</span><span class="p">);</span> 
+<span class="n">MODULE_DESCRIPTION</span><span class="p">(</span><span class="s">&quot;Slab sample&quot;</span><span class="p">);</span>
+</pre></div>
+<p>编译并装载内核模块后可以通过<code>dmesg</code>命令查看<code>printk</code>打印出的消息。</p>
+<p>以下为装载模块并卸载模块后<code>dmesg</code>的查看结果。</p>
+<h1><strong>4.slab的实现解析(概述)</strong></h1>
+
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/MyBlog/tag/coding/">#coding</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/MyBlog/tag/linux/">#linux</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/MyBlog/tag/memory manage/">#memory manage</a>
+    </span>
+    
+</div>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <h3>没有了</h3>
+        <p class="yue">这是最新的文章</p>
+    </div>
+
+
+    <div class="prev">
+        <a class="ga-highlight" href="/MyBlog/archives/linux-kernel/make-kernel-module/">编译和安装Linux内核模块</a>
+        <p class="yue">0x01--获取当前linux内核源代码</p>
+    </div>
+
+</section>
+
+
+    
+
+</main>
+
+                <footer class="ga-mono" id="ga-footer">
+                    <section>
+                        <span id="ga-uptime"></span>
+                        <span class="brand">CLD's BLOG</span>
+                    </section>
+                    <section>
+                        <p class="copyright">
+                            <span>Copyright © 2020 CLD</span>
+                            <span>Powered by <a no-style href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick & Galileo</a></span>
+                        </p>
+                        <div class="copyright">
+                            <span class="footer-addon">
+                                
+                            </span>
+                            <nav class="social-links">
+                                <ul><li><a class="no-style" title="Twitter" href="" target="_blank"><i class="gi gi-twitter"></i>Twitter</a></li><span class="separator">·</span><li><a class="no-style" title="GitHub" href="https://github.com/Cloudifold" target="_blank"><i class="gi gi-github"></i>GitHub</a></li><span class="separator">·</span><li><a class="no-style" title="Weibo" href="" target="_blank"><i class="gi gi-weibo"></i>Weibo</a></li></ul>
+                            </nav>
+                        </div>
+                    </section>
+                    <script>
+                        var site_build_date = "2019-12-18T16:51+08:00"
+                    </script>
+                    <script src="https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/assets/galileo-d8a0a06eff.js"></script>
+                </footer>
+            </div>
+        </div>
+    </div>
+        
+        
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div> 
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/assets/ExSearch/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+    
+    <!--katex-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/assets/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/assets/katex.min.js"></script>
+    <script>
+    mathOpts = {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+
+    
+    </body>
+</html>
