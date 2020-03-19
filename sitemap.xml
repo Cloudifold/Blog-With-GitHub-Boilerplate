@@ -28,7 +28,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     </url>
 
     <url>
-        <loc>/MyBlog/archives/linux-kernel/make-kernel-module/</loc>
+        <loc>/MyBlog/archives/编译和安装Linux内核模块/</loc>
         <lastmod>2020-03-16</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
