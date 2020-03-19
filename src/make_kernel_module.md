@@ -1,6 +1,5 @@
 ---
 title: 编译和安装Linux内核模块
-slug: linux-kernel/make-kernel-module
 date: 2020/03/16 00:10:00
 status: publish
 author: cldfd
