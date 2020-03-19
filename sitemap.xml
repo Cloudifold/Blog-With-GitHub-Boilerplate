@@ -42,7 +42,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     </url>
 
     <url>
-        <loc>/MyBlog/archives/coding/</loc>
+        <loc>/MyBlog/archives/自己做一个带grub引导的，可以开起OS的img！(踩坑记录)/</loc>
         <lastmod>2020-01-21</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
