@@ -1,6 +1,5 @@
 ---
 title: 这是什么样的牢笼？
-slug: trivial-thoughts
 date: 2020/03/01 3:07:00
 status: publish
 author: cldfd
