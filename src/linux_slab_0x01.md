@@ -1,5 +1,5 @@
 ---
-title: cldfd的朋友们
+title: slab分配器简析
 slug: linux-slab
 date: 2020/03/19 19:05:00
 status: publish
