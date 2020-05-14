@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>CLD's BLOG</title><link>/MyBlog/</link><description>No judge</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>${static_prefix}logo2.jpg</url><title>CLD's BLOG</title><link>/MyBlog/</link></image><language>zh-CN</language><lastBuildDate>Thu, 14 May 2020 12:06:01 +0806</lastBuildDate><pubDate>Thu, 14 May 2020 12:06:01 +0806</pubDate><item><title>Algebra-Chapter1-Group</title><link>/MyBlog/archives/Algebra-Chapter1-Group/</link><description>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>CLD's BLOG</title><link>/MyBlog/</link><description>No judge</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>${static_prefix}logo2.jpg</url><title>CLD's BLOG</title><link>/MyBlog/</link></image><language>zh-CN</language><lastBuildDate>Thu, 14 May 2020 12:07:25 +0806</lastBuildDate><pubDate>Thu, 14 May 2020 12:07:25 +0806</pubDate><item><title>Algebra-Chapter1-Group</title><link>/MyBlog/archives/Algebra-Chapter1-Group/</link><description>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
 &lt;h4&gt;合成法则&lt;/h4&gt;
 &lt;p&gt;集合$S$上的一个&lt;strong&gt;合成法则&lt;/strong&gt;（又称二元运算） $F$ 是指一个映射：&lt;/p&gt;
 &lt;p&gt;​       $ S \times S \rightarrow S$&lt;/p&gt;
@@ -243,7 +243,7 @@ losetup -d /dev/loop3
 &lt;p&gt;卸载：&lt;code&gt;rmmod &amp;lt;module name&amp;gt;&lt;/code&gt;或&lt;code&gt;modprobe -r &amp;lt;module name&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;查看：&lt;code&gt;lsmod | grep &amp;lt;module name&amp;gt;&lt;/code&gt; 、&lt;code&gt;modinfo &amp;lt;module name&amp;gt;.ko&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;（可以&lt;code&gt;dmesg&lt;/code&gt;查看&lt;code&gt;printk&lt;/code&gt;打印的消息）&lt;/p&gt;
-</description><author>hi@imalan.cn (cldfd)</author><guid isPermaLink="true">/MyBlog/archives/编译和安装Linux内核模块/</guid><pubDate>Mon, 16 Mar 2020 00:10:00 +0806</pubDate></item><item><title>cldfd的朋友们</title><link>/MyBlog/archives/linux-slab/</link><description>&lt;h1&gt;&lt;strong&gt;0.前置说明&lt;/strong&gt;&lt;/h1&gt;
+</description><author>hi@imalan.cn (cldfd)</author><guid isPermaLink="true">/MyBlog/archives/编译和安装Linux内核模块/</guid><pubDate>Mon, 16 Mar 2020 00:10:00 +0806</pubDate></item><item><title>slab分配器简析</title><link>/MyBlog/archives/linux-slab/</link><description>&lt;h1&gt;&lt;strong&gt;0.前置说明&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;(为什么要扯缓存呢？因为slab分配器实际上就是一种缓存)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;缓存&lt;/strong&gt;：缓存是一种用于"存放并管理可用的、&lt;strong&gt;已分配好&lt;/strong&gt;的对象"的对象。&lt;/p&gt;
 &lt;p&gt;缓存是为了方便对象的频繁分配(创建)与回收(销毁)而存在的。&lt;/p&gt;
