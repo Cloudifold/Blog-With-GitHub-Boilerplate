@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/MyBlog/</id><title>CLD's BLOG</title><updated>2020-04-07T08:06:35.295373+08:06</updated><author><name>CLD</name><email>hi@imalan.cn</email></author><link href="/MyBlog/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><logo>${static_prefix}logo2.jpg</logo><subtitle>No judge</subtitle><entry><id>/MyBlog/archives/Algebra-Chapter1-Group/</id><title>Algebra-Chapter1-Group</title><updated>2020-04-07T08:06:35.295602+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/MyBlog/</id><title>CLD's BLOG</title><updated>2020-05-14T12:06:01.320309+08:06</updated><author><name>CLD</name><email>hi@imalan.cn</email></author><link href="/MyBlog/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><logo>${static_prefix}logo2.jpg</logo><subtitle>No judge</subtitle><entry><id>/MyBlog/archives/Algebra-Chapter1-Group/</id><title>Algebra-Chapter1-Group</title><updated>2020-05-14T12:06:01.320510+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;p&gt;--一个集合加上一个运算规则就是一个代数结构.&lt;/p&gt;
 &lt;h4&gt;合成法则&lt;/h4&gt;
 &lt;p&gt;集合$S$上的一个&lt;strong&gt;合成法则&lt;/strong&gt;（又称二元运算） $F$ 是指一个映射：&lt;/p&gt;
 &lt;p&gt;​       $ S \times S \rightarrow S$&lt;/p&gt;
@@ -65,7 +65,7 @@
 &lt;/ul&gt;
 &lt;h4&gt;群 与 子群&lt;/h4&gt;
 &lt;p&gt;一个&lt;strong&gt;群&lt;/strong&gt;是一个&lt;/p&gt;
-</content><link href="/MyBlog/archives/Algebra-Chapter1-Group/" rel="alternate"/><published>2020-01-06T09:03:00+08:06</published></entry><entry><id>/MyBlog/archives/自己做一个带grub引导的，可以开起OS的img！(踩坑记录)/</id><title>自己做一个带grub引导的，可以开起OS的img！(踩坑记录)</title><updated>2020-04-07T08:06:35.295567+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;h3&gt;0x00: 环境介绍&lt;/h3&gt;
+</content><link href="/MyBlog/archives/Algebra-Chapter1-Group/" rel="alternate"/><published>2020-01-06T09:03:00+08:06</published></entry><entry><id>/MyBlog/archives/自己做一个带grub引导的，可以开起OS的img！(踩坑记录)/</id><title>自己做一个带grub引导的，可以开起OS的img！(踩坑记录)</title><updated>2020-05-14T12:06:01.320488+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;h3&gt;0x00: 环境介绍&lt;/h3&gt;
 &lt;p&gt;linux kali 2019.4 kde&lt;/p&gt;
 &lt;p&gt;ubuntu 以及其他linux发行版应该也可以用，毕竟用的远古版本的grub.&lt;/p&gt;
 &lt;h3&gt;0x01: GET grubFILE&lt;/h3&gt;
@@ -174,7 +174,7 @@ losetup -d /dev/loop3
 &lt;p&gt;&lt;a href="https://blog.csdn.net/RichardGreenhhh/article/details/78087066"&gt;https://blog.csdn.net/RichardGreenhhh/article/details/78087066&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://blog.csdn.net/embed2010/article/details/6010919"&gt;https://blog.csdn.net/embed2010/article/details/6010919&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://blog.csdn.net/oXueFeiDeYu/article/details/42317939"&gt;https://blog.csdn.net/oXueFeiDeYu/article/details/42317939&lt;/a&gt;&lt;/p&gt;
-</content><link href="/MyBlog/archives/自己做一个带grub引导的，可以开起OS的img！(踩坑记录)/" rel="alternate"/><published>2020-01-21T15:37:00+08:06</published></entry><entry><id>/MyBlog/archives/这是什么样的牢笼？/</id><title>这是什么样的牢笼？</title><updated>2020-04-07T08:06:35.295530+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;p&gt;某个时候我开始在意起了别人的看法……&lt;/p&gt;
+</content><link href="/MyBlog/archives/自己做一个带grub引导的，可以开起OS的img！(踩坑记录)/" rel="alternate"/><published>2020-01-21T15:37:00+08:06</published></entry><entry><id>/MyBlog/archives/这是什么样的牢笼？/</id><title>这是什么样的牢笼？</title><updated>2020-05-14T12:06:01.320466+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;p&gt;某个时候我开始在意起了别人的看法……&lt;/p&gt;
 &lt;p&gt;更准确地说，是“我所认为的别人的看法”……&lt;/p&gt;
 &lt;p&gt;某个时候我发现这些看法已经几乎没有“正面”的了…………&lt;/p&gt;
 &lt;p&gt;我害怕责备…所以会想尽办法解释……&lt;/p&gt;
@@ -190,7 +190,7 @@ losetup -d /dev/loop3
 &lt;p&gt;经历了这些之后我早就无法自由表达了……&lt;/p&gt;
 &lt;p&gt;或者说……我还有自由吗？&lt;/p&gt;
 &lt;p&gt;这是什么样的牢笼？&lt;/p&gt;
-</content><link href="/MyBlog/archives/这是什么样的牢笼？/" rel="alternate"/><published>2020-03-01T03:07:00+08:06</published></entry><entry><id>/MyBlog/archives/编译和安装Linux内核模块/</id><title>编译和安装Linux内核模块</title><updated>2020-04-07T08:06:35.295505+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;p&gt;0x01--获取&lt;strong&gt;当前linux内核&lt;/strong&gt;源代码&lt;/p&gt;
+</content><link href="/MyBlog/archives/这是什么样的牢笼？/" rel="alternate"/><published>2020-03-01T03:07:00+08:06</published></entry><entry><id>/MyBlog/archives/编译和安装Linux内核模块/</id><title>编译和安装Linux内核模块</title><updated>2020-05-14T12:06:01.320443+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;p&gt;0x01--获取&lt;strong&gt;当前linux内核&lt;/strong&gt;源代码&lt;/p&gt;
 &lt;p&gt;直接&lt;code&gt;apt-get install linux-source&lt;/code&gt;（这样做会下载到&lt;code&gt;/lib/modules/$(shell uname -r)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;或者下载当前内核版本的源码（网上乱找）&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;获取内核版本 &lt;code&gt;uname -a&lt;/code&gt;或&lt;code&gt;uname -r&lt;/code&gt;&lt;/p&gt;
@@ -243,7 +243,7 @@ losetup -d /dev/loop3
 &lt;p&gt;卸载：&lt;code&gt;rmmod &amp;lt;module name&amp;gt;&lt;/code&gt;或&lt;code&gt;modprobe -r &amp;lt;module name&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;查看：&lt;code&gt;lsmod | grep &amp;lt;module name&amp;gt;&lt;/code&gt; 、&lt;code&gt;modinfo &amp;lt;module name&amp;gt;.ko&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;（可以&lt;code&gt;dmesg&lt;/code&gt;查看&lt;code&gt;printk&lt;/code&gt;打印的消息）&lt;/p&gt;
-</content><link href="/MyBlog/archives/编译和安装Linux内核模块/" rel="alternate"/><published>2020-03-16T00:10:00+08:06</published></entry><entry><id>/MyBlog/archives/linux-slab/</id><title>cldfd的朋友们</title><updated>2020-04-07T08:06:35.295460+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;h1&gt;&lt;strong&gt;0.前置说明&lt;/strong&gt;&lt;/h1&gt;
+</content><link href="/MyBlog/archives/编译和安装Linux内核模块/" rel="alternate"/><published>2020-03-16T00:10:00+08:06</published></entry><entry><id>/MyBlog/archives/linux-slab/</id><title>cldfd的朋友们</title><updated>2020-05-14T12:06:01.320416+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;h1&gt;&lt;strong&gt;0.前置说明&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;(为什么要扯缓存呢？因为slab分配器实际上就是一种缓存)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;缓存&lt;/strong&gt;：缓存是一种用于"存放并管理可用的、&lt;strong&gt;已分配好&lt;/strong&gt;的对象"的对象。&lt;/p&gt;
 &lt;p&gt;缓存是为了方便对象的频繁分配(创建)与回收(销毁)而存在的。&lt;/p&gt;
@@ -421,4 +421,155 @@ losetup -d /dev/loop3
 &lt;p&gt;编译并装载内核模块后可以通过&lt;code&gt;dmesg&lt;/code&gt;命令查看&lt;code&gt;printk&lt;/code&gt;打印出的消息。&lt;/p&gt;
 &lt;p&gt;以下为装载模块并卸载模块后&lt;code&gt;dmesg&lt;/code&gt;的查看结果。&lt;/p&gt;
 &lt;h1&gt;&lt;strong&gt;4.slab的实现解析(概述)&lt;/strong&gt;&lt;/h1&gt;
-</content><link href="/MyBlog/archives/linux-slab/" rel="alternate"/><published>2020-03-19T19:05:00+08:06</published></entry></feed>
+</content><link href="/MyBlog/archives/linux-slab/" rel="alternate"/><published>2020-03-19T19:05:00+08:06</published></entry><entry><id>/MyBlog/archives/概率导论第一章笔记/</id><title>概率导论第一章笔记</title><updated>2020-05-14T12:06:01.320366+00:00</updated><author><name>cldfd</name><email>hi@imalan.cn</email><uri>MyBlog</uri></author><content>&lt;h3&gt;概率模型的基本构成&lt;/h3&gt;
+&lt;p&gt;概率模型是对不确定现象的数学描述&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;样本空间&lt;/strong&gt; $\Omega$ ,这是一个&lt;code&gt;试验&lt;/code&gt;的所有可能结果的集合。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;概率律&lt;/strong&gt; 概率律为 &lt;code&gt;试验&lt;/code&gt;结果的集合$A$(称为事件)确定一个非负数$P(A)$(称为事件$A$的概率)，这个非负数刻画了我们对事件$A$的认识。概率律可以看作映射$P:powerset(\Omega)\rightarrow R$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;样本空间与事件&lt;/h3&gt;
+&lt;p&gt;每一个&lt;code&gt;概率模型&lt;/code&gt;都关联着一次&lt;code&gt;试验&lt;/code&gt;，这个&lt;code&gt;试验&lt;/code&gt;将产生一次&lt;code&gt;试验结果&lt;/code&gt;，该试验的所有可能结果形成&lt;strong&gt;样本空间&lt;/strong&gt;。样本空间的子集，即某些试验结果的集合，称为&lt;code&gt;事件&lt;/code&gt;。(一个&lt;code&gt;试验&lt;/code&gt;由什么组成并没有什么限制)&lt;/p&gt;
+&lt;p&gt;确定样本空间的时候，不同的试验结果必须是&lt;strong&gt;相互排斥&lt;/strong&gt;的，这样，在试验过程中只可能产生&lt;strong&gt;唯一&lt;/strong&gt;的一个结果。(还有：建立样本空间时要有足够的细节区分我们感兴趣的事件，同时避免不必要的繁琐)&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;本文章默认使用$\Omega$表示样本空间&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;概率律&lt;/h3&gt;
+&lt;p&gt;假定我们已经确定了样本空间$\Omega$以及与之联系的试验。为了建立一个概率模型，下一步就是确定&lt;code&gt;概率律&lt;/code&gt;。概率律要满足一些性质：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;非负性: $\forall A \in powerset(\Omega),P(A) \geq 0$&lt;/li&gt;
+&lt;li&gt;可加性: $A \cap B = \varnothing \Rightarrow P(A \cup B) = P(A) + P(B)$&lt;/li&gt;
+&lt;li&gt;归一化: $P(\Omega)=1$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$1 = P(\Omega \cup \varnothing) = P(\Omega) + P(\varnothing)=1\Rightarrow P(\varnothing)=0$&lt;/p&gt;
+&lt;h3&gt;离散概率率&lt;/h3&gt;
+&lt;p&gt;设样本空间由有限个可能的结果组成，则事件的概率可以由组成这个事件的试验结果的概率所决定。&lt;/p&gt;
+&lt;p&gt;$P(\{s_1,s_2,\dotsc, s_n\})=P(\{s_1\})+P(\{s_2\})+\dotsb+P(\{s_n\})$其中$S_i$为一个可能的试验结果。&lt;/p&gt;
+&lt;h4&gt;离散均匀概率律&lt;/h4&gt;
+&lt;p&gt;设样本空间由$n$个等可能性的试验结果组成(不妨设样本空间$\Omega = \{s_1,s_2,\dotsc,s_n\}$)，因此每个试验结果组成的事件(称为基本事件)的概率相等，即$P(\{s_i\})=\dfrac{1}{n}$(此处$i=1,2,\dotsc ,n$)&lt;/p&gt;
+&lt;p&gt;概率律的性质&lt;/p&gt;
+&lt;p&gt;考虑一个概率律，$A,B,C$为事件。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$A\subset B \Rightarrow P(A) \leq P(B)$&lt;/li&gt;
+&lt;li&gt;$P(A \cup B) = P(A)+P(B)-P(A \cap B)$&lt;/li&gt;
+&lt;li&gt;$P(A\cup B \cup C)=P(A)+P(A^c\cap B)+P(A^c \cap B^c \cap C)$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;条件概率&lt;/h3&gt;
+&lt;p&gt;给定一个试验与这个试验对应的样本空间和概率律，假定我们已经知道给定的事件$B$发生了，
+希望知道另一个给定的事件$X$发生的可能性。
+因此，我们可以从原有的概率律$P(X)$构造一个&lt;strong&gt;新的概率律&lt;/strong&gt;$P(X|B)$，
+它顾及了事件$B$发生的信息，可以求出任意事件$X$发生的概率。
+这个概率就是给定$B$发生之下事件$X$的条件概率。&lt;/p&gt;
+&lt;p&gt;条件概率定义：&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;这个定义可以由一些简单情况推广得到。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;$P(A|B)=\dfrac{P(A\cap B)}{P(B)}$
+其中假定$P(B)&gt;0$，若$P(B)=0$，相应的条件概率暂时没有定义。
+容易证明条件概率是一个&lt;code&gt;概率律&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;对于事件$A_1,A_2,A_3,\dotsc ,A_n$(其中$P(A_i)&gt;0$)
+易得到&lt;/p&gt;
+&lt;p&gt;$$
+P(\bigcap^{n}_{i=1} A_i)=P(A_1)P(A_2|A_1)P(A_3|A_1\cap |A_2)\dotsm P(A&lt;em&gt;n|\bigcap^{n-1}&lt;/em&gt;{i=1} Ai)
+$$&lt;/p&gt;
+&lt;h3&gt;全概率定理&lt;/h3&gt;
+&lt;p&gt;设$A_1,A_2,\dotsc,A_n$&lt;strong&gt;互不相容&lt;/strong&gt;(即$\forall 1\leq i,j\leq n,A_i \cap A_j = \varnothing$)
+形成样本空间的一个分割(互不相容且$\bigcup^{n}_{i=1} A_i=\Omega$)&lt;/p&gt;
+&lt;p&gt;若$\forall 1\leq i\leq n,P(A_i)&gt;0$则对于任意事件$X$，有&lt;/p&gt;
+&lt;p&gt;$$ P(X)= \sum^{n}_{i=1} P(A_i\cap X)=\sum^{n}_{i=1} P(A_i)P(X|A_i)$$&lt;/p&gt;
+&lt;h3&gt;贝叶斯准则&lt;/h3&gt;
+&lt;p&gt;设$A_1,A_2,\dotsc,A_n$&lt;strong&gt;互不相容&lt;/strong&gt;(即$\forall 1\leq i,j\leq n,A_i \cap A_j = \varnothing$)
+形成样本空间的一个分割(互不相容且$\bigcup^{n}_{i=1} A_i=\Omega$)&lt;/p&gt;
+&lt;p&gt;若$\forall 1\leq i\leq n,P(A_i)&gt;0$则对于任意事件$X$满足$P(X)&gt;0$，有&lt;/p&gt;
+&lt;p&gt;$P(X)P(A_i|X)=P(A_i)P(X|A_i)$&lt;/p&gt;
+&lt;p&gt;若$P(X)&gt;0$，则有&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}&lt;/p&gt;
+&lt;p&gt;P(A_i|X) &amp;amp; = \dfrac{P(A_i)P(X|A_i)}{P(X)}\
+         &amp;amp; = \dfrac {P(A_i)P(X|A&lt;em&gt;i)}
+                    {\sum^{n}&lt;/em&gt;{i=1} P(A_i)P(X|A_i)}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h3&gt;独立性&lt;/h3&gt;
+&lt;h5&gt;相互独立&lt;/h5&gt;
+&lt;p&gt;条件概率中有趣的情况：事件$B$的发生&lt;strong&gt;没有&lt;/strong&gt;给事件$A$带来新的信息，
+即$P(A|B)=P(A)$。&lt;/p&gt;
+&lt;p&gt;这种情况我们可以说事件$A$是&lt;strong&gt;独立&lt;/strong&gt;于事件$B$的。
+由条件概率的定义，$P(A\cap B)=P(A)P(B)$蕴含着$P(A|B)=P(A)$。
+我们将$P(A\cap B)=P(A)P(B)$作为事件$A,B$&lt;strong&gt;相互独立&lt;/strong&gt;的&lt;strong&gt;正式定义&lt;/strong&gt;，
+因为它包含了$P(B)=0$的情况。在这个关系中$A$独立于$B$蕴含着$B$独立于$A$，所以称为&lt;code&gt;相互独立&lt;/code&gt;。&lt;/p&gt;
+&lt;h5&gt;条件独立&lt;/h5&gt;
+&lt;p&gt;在给定发生某事件$C$的条件下，可以构造一个新的概率律P(X|C)，
+所以我们可以考虑条件概率律下的独立性。&lt;/p&gt;
+&lt;p&gt;若$P(A\cap B|C)=P(A|C)P(B|C)$，则称$A$和$B$在给定条件$C$下&lt;strong&gt;条件独立&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;变形左式可以得到$P(B|C)P(A|B\cap C)=P(A|C)P(B|C)$，只要$P(B|C)\neq 0$，
+那么就可以得到$P(A|B\cap C)=P(A|C)$。这个等式说明在给定$C$的条件下，
+假定$B$发生，不影响给定$C$发生下$A$的条件概率。&lt;/p&gt;
+&lt;p&gt;$A,B$两个事件相互独立&lt;strong&gt;不一定&lt;/strong&gt;意味着条件独立，反之亦然。&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;例：考虑抛2次质地均匀的硬币，这个试验的4种结果都是等可能的(分别记为$1,2,3,4$)。&lt;/p&gt;
+&lt;p&gt;设事件$A=\{1,2\},B={1,3},C={2,3}$&lt;/p&gt;
+&lt;p&gt;显然有$P(A)P(B)=P(A\cap B)$，&lt;/p&gt;
+&lt;p&gt;$P(A\cap B|C)=0\neq P(A|C)P(B|C)$&lt;/p&gt;
+&lt;p&gt;即事件$A$和$B$相互独立但不在给定$C$下条件独立。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5&gt;一组事件的独立性&lt;/h5&gt;
+&lt;p&gt;独立性的定义可以拓展到$n$个事件的情况。&lt;/p&gt;
+&lt;p&gt;设$A_1,A_2,\dotsc,A_n$为$n$个事件，若他们满足&lt;/p&gt;
+&lt;p&gt;$$\forall i\subset \{1,2,\dotsc,n\},P(\bigcap_{i\in S})=\prod_{i\in S} P(A_i)$$&lt;/p&gt;
+&lt;p&gt;则称$A_1,A_2,\dotsc,A_n$为&lt;strong&gt;相互独立&lt;/strong&gt;的事件。&lt;/p&gt;
+&lt;p&gt;容易举例证明一组事件两两独立并不包含相互独立。&lt;/p&gt;
+&lt;p&gt;独立性意味着把一组事件任意分成两个小组，
+一个小组的任意个数事件的出现与不出现都不会影响到另一个小组中事件的概率。
+(也就是不会带来另一个小组中的事件的任何有影响的信息)&lt;/p&gt;
+&lt;h3&gt;计数方法&lt;/h3&gt;
+&lt;h5&gt;计数准则&lt;/h5&gt;
+&lt;blockquote&gt;&lt;p&gt;考虑$r$个阶段组成的一个试验，假设：&lt;/p&gt;
+&lt;p&gt;在第一阶段有$n_1$个可能的结果。&lt;/p&gt;
+&lt;p&gt;对于第$i$个阶段的任何一个结果($1\leq i&lt;r$)，
+在第$i+1$个阶段有$n_{i+1}$个可能的结果。&lt;/p&gt;
+&lt;p&gt;则在$r$个阶段的试验中一共有$\prod^{r}_{i=1}n_i$个结果。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5&gt;排列&lt;/h5&gt;
+&lt;p&gt;用计数准则可以得到&lt;/p&gt;
+&lt;p&gt;从$n$个不同对象有序地选取$k$个不同对象的方法数为&lt;/p&gt;
+&lt;p&gt;$$
+n(n-1)\dotsm (n-k+1)
+=\dfrac{n!}{(n-k)!}
+$$&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;共有$k$个阶段，选择第$i$个对象时(第$i$阶段)，&lt;/p&gt;
+&lt;p&gt;有剩下的$n-(i-1)$个对象可供选择，利用计数准则可得上式。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这种序列称为$n$取$k$的&lt;strong&gt;排列数&lt;/strong&gt;，记作$A^k_n$。&lt;/p&gt;
+&lt;p&gt;当$k=n$时，简称为&lt;strong&gt;排列&lt;/strong&gt;，此时所有可能的序列数为$n!$。&lt;/p&gt;
+&lt;h5&gt;组合&lt;/h5&gt;
+&lt;p&gt;在$n$个对象中取$k$个对象的组合
+(即给定$n$个元素的集合，取有$k$个元素的子集。)中，
+每一个组合对应了$k!$个不同的排列。&lt;/p&gt;
+&lt;p&gt;因此从$n$个元素选$k$个元素的&lt;strong&gt;组合数&lt;/strong&gt;(又叫&lt;strong&gt;二项式系数&lt;/strong&gt;)为&lt;/p&gt;
+&lt;p&gt;$$C^k_n=\dfrac{n!}{(k!)(n-k)!}=\binom{n}{k}$$&lt;/p&gt;
+&lt;h5&gt;分划&lt;/h5&gt;
+&lt;p&gt;可以将组合看成是从$n$个元素集合选出一个元素个数为$k$的子集，
+因此可以将一个组合看成将集合分成$2$个子集的一个&lt;strong&gt;分划&lt;/strong&gt;。
+现在我们考虑把一个集合分为多于$2$个子集的分划。&lt;/p&gt;
+&lt;p&gt;给定一个元素为$n$的集合，设$n1,n2,\dotsc,n_r$为非负整数，
+且$\sum^{r}_{i=1}n_i=n$。
+现考虑将有$n$个元素的集合分为$r$个子集，
+使得第$i$个子集的元素个数为$n_i$，求共有多少种分解方法。&lt;/p&gt;
+&lt;p&gt;分阶段每次确定一个子集，有$\binom{n}{n_1}$种方法确定第一个子集，
+当第一个子集确定后，有剩余$n-n_1$个元素用于确定第二个子集，
+故有$\binom{n-n_1}{n_2}$种方法确定第二个子集。
+以此类推，并对$r$个阶段的选择过程利用计数准则，得到的总选择方法数为&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}&lt;/p&gt;
+&lt;p&gt;&amp;amp;\binom{n}{n_1}\binom{n-n_1}{n_2}\binom{n-n_1-n_2}{n_3}
+\dotsm\binom{n-n&lt;em&gt;1-\dotsm-n&lt;/em&gt;{r-1}}{n_r}
+\
+&amp;amp;=\dfrac{n!}{n_1!(n-n_1)!}\dfrac{(n-n_1)!}{n_2!(n-n_1-n_2)!}
+\dotsm
+\dfrac{(n-n&lt;em&gt;1-\dotsm-n&lt;/em&gt;{r-1})!}{n_r!(n-n&lt;em&gt;1-\dotsm-n&lt;/em&gt;{r-1}-n_r)!}
+\
+&amp;amp;=\dfrac{n!}{n_1!n_2!\dotsm n_r!}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;这个数称为&lt;strong&gt;多项式系数&lt;/strong&gt;，用下列记号表示：&lt;/p&gt;
+&lt;p&gt;$$
+\binom{n}{n_1,n_2,\dotsm,n_r}
+$$&lt;/p&gt;
+</content><link href="/MyBlog/archives/概率导论第一章笔记/" rel="alternate"/><published>2020-03-24T16:40:00+08:06</published></entry></feed>
