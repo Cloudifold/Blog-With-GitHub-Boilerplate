@@ -19,7 +19,7 @@ tags:
 
 [NightRain](https://rainx.top/) : 是CSP大佬！
 
-[binLep](https://binlep.github.io/) : 软工专业的pwn大佬！
+[binLep](https://binlep.top/) : 软工专业的pwn大佬,Delta成员！！
 
 [lrcno6](https://lrcno6.github.io/) : 超强高中生
 
