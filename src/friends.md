@@ -30,3 +30,7 @@ tags:
 [yizr-cnyali](https://yizr-cnyali.ac) : 同学qwq
 
 [moi](https://moi-mo.github.io/) : 一般通过女生
+
+[午时葵](https://yuumu.moe) : 可爱的小葵www
+
+[清浔](http://cmath.cc/) : 清浔姐姐w!
