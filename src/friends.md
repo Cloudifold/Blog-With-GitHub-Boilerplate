@@ -15,11 +15,11 @@ tags:
 
 <del>描……描述其实是乱写的</del>
 
-要是有朋友对描述有异议的话可以联系Cldfd进行修改！
+要是有朋友对描述有异议的话可以联系Cldfd进行修改w
 
 [NightRain](https://rainx.top/) : 是CSP大佬！
 
-[binLep](https://binlep.top/) : 软工专业的pwn大佬,Delta成员！！
+[binLep](https://binlep.top/) : 软工专业的pwn大佬,Delta成员w
 
 [lrcno6](https://lrcno6.github.io/) : 超强高中生
 
@@ -28,6 +28,8 @@ tags:
 [Alpha1022](http://rain.moimo.me) : 可爱的初中生OIer
 
 [yizr-cnyali](https://yizr-cnyali.ac) : 同学qwq
+
+[Senioria](https://91khr.github.io/out/index.html) : 刺猬洞w
 
 [moi](https://moi-mo.github.io/) : 一般通过女生
 
