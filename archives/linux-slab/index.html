@@ -17,7 +17,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/ee3ad8061c70b4756dcfbac40c896fa4.json"
+            api: "https://cdn.jsdelivr.net/gh/Cloudifold/MyBlog@gh-pages/633005064ce8d82d989fd4cead9798c7.json"
         }
     </script>
     
@@ -141,9 +141,9 @@
 
 <pre><code>void kmem_cache_destroy(struct kmem_cache *);</code></pre>
 <p>我们可以写出以下代码示例来使用slab分配器分配结构体。</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;linux/init.h&gt; </span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;linux/module.h&gt; </span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;linux/module.h&gt; </span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;linux/init.h&gt;</span><span class="c1"> </span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;linux/module.h&gt;</span><span class="c1"> </span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;linux/module.h&gt;</span><span class="c1"> </span><span class="cp"></span>
 
 <span class="cp">#include</span> <span class="cpf">&lt;linux/unistd.h&gt;</span><span class="cp"></span>
 <span class="c1">//#include &lt;sys/type.h&gt;</span>
@@ -157,22 +157,22 @@
 <span class="k">static</span> <span class="kt">int</span> <span class="n">sample_struct_num</span><span class="p">;</span> <span class="cm">/* how many times sample_struct_ctor will be used */</span>
 
 
-<span class="k">struct</span> <span class="n">sample_struct</span> <span class="p">{</span>
+<span class="k">struct</span> <span class="nc">sample_struct</span> <span class="p">{</span>
     <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
     <span class="kt">char</span> <span class="n">firstname</span><span class="p">[</span><span class="mh">0x10</span><span class="p">];</span>
     <span class="kt">char</span> <span class="n">lastname</span><span class="p">[</span><span class="mh">0x10</span><span class="p">];</span>
 <span class="p">};</span>
 
 
-<span class="k">static</span> <span class="k">struct</span> <span class="n">kmem_cache</span> <span class="o">*</span><span class="n">sample_struct_cachep</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">struct</span> <span class="nc">kmem_cache</span> <span class="o">*</span><span class="n">sample_struct_cachep</span><span class="p">;</span>
 
 <span class="cm">/* store pointers points struct sample_struct */</span>
-<span class="k">static</span> <span class="k">struct</span> <span class="n">sample_struct</span> <span class="o">*</span><span class="n">sample_struct_pool</span><span class="p">[</span><span class="n">OBJNUM</span><span class="p">];</span>
+<span class="k">static</span> <span class="k">struct</span> <span class="nc">sample_struct</span> <span class="o">*</span><span class="n">sample_struct_pool</span><span class="p">[</span><span class="n">OBJNUM</span><span class="p">];</span>
 
 <span class="cm">/* constructor of struct_ctor */</span>
-<span class="k">static</span> <span class="kt">void</span> <span class="nf">sample_struct_ctor</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">cachep</span><span class="p">)</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="n">sample_struct_ctor</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">cachep</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="p">((</span><span class="k">struct</span> <span class="n">sample_struct</span> <span class="o">*</span><span class="p">)</span><span class="n">cachep</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">id</span> <span class="o">=</span> <span class="n">sample_struct_num</span><span class="p">;</span>
+    <span class="p">((</span><span class="k">struct</span> <span class="nc">sample_struct</span> <span class="o">*</span><span class="p">)</span><span class="n">cachep</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">id</span> <span class="o">=</span> <span class="n">sample_struct_num</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="o">++</span><span class="n">sample_struct_num</span> <span class="o">%</span><span class="n">PRINT_INTERVAL</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
     <span class="p">{</span>
         <span class="n">printk</span> <span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">&quot;inited %d objects&quot;</span><span class="p">,</span> <span class="n">sample_struct_num</span><span class="p">);</span>
@@ -180,7 +180,7 @@
 <span class="p">}</span>
 
 
-<span class="k">static</span> <span class="kt">void</span> <span class="nf">print_kmem_cache_info_qwq</span><span class="p">(</span><span class="k">struct</span> <span class="n">kmem_cache</span> <span class="o">*</span><span class="n">cachep</span><span class="p">)</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="n">print_kmem_cache_info_qwq</span><span class="p">(</span><span class="k">struct</span> <span class="nc">kmem_cache</span> <span class="o">*</span><span class="n">cachep</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">printk</span> <span class="p">(</span><span class="s">&quot;kmem_cache size : 0x%x</span><span class="se">\\</span><span class="s">n&quot;</span><span class="p">,</span> <span class="n">kmem_cache_size</span> <span class="p">(</span><span class="n">cachep</span><span class="p">));</span>
     <span class="n">printk</span> <span class="p">(</span><span class="s">&quot;kmem_cache name : %s</span><span class="se">\\</span><span class="s">n&quot;</span><span class="p">,</span> <span class="n">cachep</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">);</span>
@@ -189,13 +189,13 @@
 <span class="p">}</span>
 
 
-<span class="k">static</span> <span class="kt">int</span> <span class="nf">sample_mod_init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="n">sample_mod_init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
 
     <span class="n">sample_struct_cachep</span> <span class="o">=</span> <span class="n">kmem_cache_create</span> <span class="p">(</span>
             <span class="s">&quot;sample_struct_cachep&quot;</span><span class="p">,</span>         <span class="cm">/* Name */</span>
-            <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">sample_struct</span><span class="p">),</span>   <span class="cm">/* Object Size */</span>
+            <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="nc">sample_struct</span><span class="p">),</span>   <span class="cm">/* Object Size */</span>
             <span class="mi">0</span><span class="p">,</span>                              <span class="cm">/* Alignment */</span>
             <span class="n">SLAB_HWCACHE_ALIGN</span><span class="p">,</span>             <span class="cm">/* Flags */</span>
             <span class="n">sample_struct_ctor</span><span class="p">);</span>            <span class="cm">/* Constructor */</span>
@@ -231,7 +231,7 @@
 <span class="p">}</span>
 
 
-<span class="k">static</span> <span class="kt">void</span> <span class="nf">sample_mod_exit</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="n">sample_mod_exit</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
 
