@@ -13,26 +13,27 @@ tags:
 
 不排序！朋友怎么可以被排序呢！
 
-<del>描……描述其实是乱写的</del>
 
 要是有朋友对描述有异议的话可以联系Cldfd进行修改w
 
-[NightRain](https://rainx.top/) : 是CSP大佬！
+[NightRain](https://rainx.top/) :
 
-[binLep](https://binlep.top/) : 软工专业的pwn大佬,Delta成员w
+[binLep](https://binlep.top/) : 
 
-[lrcno6](https://lrcno6.github.io/) : 超强高中生
+[lrcno6](https://lrcno6.github.io/) :
 
-[江程训](https://censujiang.com) : 技术宅，漫宅和伪娘于一身的废萌聚合体。
+[江程训](https://censujiang.com) : 
 
-[Alpha1022](http://rain.moimo.me) : 可爱的初中生OIer
+[Alpha1022](http://rain.moimo.me) : 
 
-[yizr-cnyali](https://yizr-cnyali.ac) : 同学qwq
+[yizr-cnyali](https://yizr-cnyali.ac) :
 
-[Senioria](https://91khr.github.io/out/index.html) : 刺猬洞w
+[Senioria](https://91khr.github.io/out/index.html) :
 
-[moi](https://moi-mo.github.io/) : 一般通过女生
+[moi](https://moi-mo.github.io/) :
 
-[午时葵](https://yuumu.moe) : 可爱的小葵www
+[午时葵](https://yuumu.moe) :
 
-[清浔](http://cmath.cc/) : 清浔姐姐w!
+[清浔](http://cmath.cc/) :
+
+[raptazure](https://raptazure.github.io/) :
